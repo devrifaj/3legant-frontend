@@ -7,7 +7,7 @@ const HomePage_2 = () => {
       <main className="flex-1">
         <div className="flex-center">This is home 2</div>
       </main>
-      <Footer />
+      <Footer variant="home-2" />
     </>
   );
 };

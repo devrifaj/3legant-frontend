@@ -1,9 +1,15 @@
 import { FacebookIcon, InstagramIcon, YoutubeIcon } from "@/icons";
 import Link from "next/link";
 
-const Footer = () => {
+interface FooterProps {
+  variant: "home-1" | "home-2";
+}
+
+const Footer = ({ variant }: FooterProps) => {
+  const home2 = variant === "home-2";
+
   return (
-    <footer className="md:bg-neutral-7 bg-neutral-6"> 
+    <footer className="md:bg-neutral-7 bg-neutral-6">
       <div className="wrapper pt-14 md:pt-20 md:pb-8 pb-12">
         {/* footer top part */}
         <div className="flex flex-col md:flex-row justify-between md:items-start items-center mb-10 md:mb-12">
@@ -18,7 +24,7 @@ const Footer = () => {
 
             <div className="bg-neutral-4 xs:w-[1px] xs:h-6 w-6 h-[1px]"></div>
 
-            <p className="caption-1">Gift & Decoration Store</p>
+            <p className="caption-1">{ home2 ? "Headphone Store" : "Gift & Decoration Store" }</p>
           </div>
 
           {/* footer links */}

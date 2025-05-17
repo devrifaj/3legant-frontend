@@ -14,7 +14,7 @@ const DeskNav = () => {
           >
             {/* top link of the dropdown */}
             <Link
-              className="flex items-center gap-1 lg:text-base text-sm font-space-grotesk"
+              className="flex items-center gap-1 lg:text-base text-sm font-space-grotesk text-neutral-7"
               href={item.route}
             >
               {item.label}
@@ -29,7 +29,7 @@ const DeskNav = () => {
                 <li className="relative group/link" key={child.label}>
                   {/* dropdown top link */}
                   <Link
-                    className="flex-between gap-1 p-2 text-neutral-4 group-hover/link:text-black w-full transition-all duration-200"
+                    className="flex-between gap-1 p-2 text-neutral-4 group-hover/link:text-neutral-7 w-full transition-all duration-200"
                     href={child.route}
                   >
                     {child.label}

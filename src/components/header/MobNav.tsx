@@ -16,7 +16,11 @@ type MobNavProps = {
 };
 
 // Recursive nav item renderer
-const renderNavItems = (items: typeof navItems, depth = 0) => {
+const renderNavItems = (
+  items: typeof navItems,
+  setMenuOpen: (open: boolean) => void,
+  depth = 0
+) => {
   return items.map((item) => {
     const isTopLevel = depth === 0;
     const liClasses = isTopLevel ? "border-b border-neutral-3 py-2" : "";
@@ -26,7 +30,9 @@ const renderNavItems = (items: typeof navItems, depth = 0) => {
         <li key={item.label} className={liClasses}>
           <details>
             <summary>{item.label}</summary>
-            <ul className="ml-4">{renderNavItems(item.children, depth + 1)}</ul>
+            <ul className="ml-4">
+              {renderNavItems(item.children, setMenuOpen, depth + 1)}
+            </ul>
           </details>
         </li>
       );
@@ -34,7 +40,9 @@ const renderNavItems = (items: typeof navItems, depth = 0) => {
 
     return (
       <li key={item.label} className={liClasses}>
-        <Link href={item.route}>{item.label}</Link>
+        <Link href={item.route} onClick={() => setMenuOpen(false)}>
+          {item.label}
+        </Link>
       </li>
     );
   });
@@ -65,7 +73,7 @@ const MobNav = ({ isMenuOpen, setMenuOpen }: MobNavProps) => {
 
           {/* menu */}
           <ul className="menu rounded-box w-full p-0 font-medium mt-4">
-            {renderNavItems(navItems)}
+            {renderNavItems(navItems, setMenuOpen)}
           </ul>
         </div>
 
@@ -75,7 +83,7 @@ const MobNav = ({ isMenuOpen, setMenuOpen }: MobNavProps) => {
           <div className="flex-between py-2 border-b border-neutral-3">
             <span className="text-lg font-medium  text-neutral-4">Cart</span>
 
-            <Link href="/cart">
+            <Link href="/cart" onClick={() => setMenuOpen(false)}>
               <ShoppingBagIcon />
             </Link>
           </div>
@@ -86,13 +94,17 @@ const MobNav = ({ isMenuOpen, setMenuOpen }: MobNavProps) => {
               Wishlist
             </span>
 
-            <Link href="/cart">
+            <Link href="/wishlist" onClick={() => setMenuOpen(false)}>
               <HeartIcon />
             </Link>
           </div>
 
           {/* sign in link */}
-          <Link className="button-primary inline-block mb-5" href="/sign-in">
+          <Link
+            className="button-primary inline-block mb-5"
+            href="/sign-in"
+            onClick={() => setMenuOpen(false)}
+          >
             Sign In
           </Link>
 
