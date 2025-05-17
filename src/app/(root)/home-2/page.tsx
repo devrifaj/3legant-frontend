@@ -1,10 +1,15 @@
-import { Hero_2 } from '@/components'
-import React from 'react'
+import { Footer } from "@/components";
+import React from "react";
 
-const Home_2 = () => {
+const HomePage_2 = () => {
   return (
-    <div><Hero_2/></div>
-  )
-}
+    <>
+      <main className="flex-1">
+        <div className="flex-center">This is home 2</div>
+      </main>
+      <Footer />
+    </>
+  );
+};
 
-export default Home_2
+export default HomePage_2;

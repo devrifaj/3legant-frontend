@@ -4,7 +4,7 @@ import React from "react";
 const NotFound = () => {
   return (
     <div className="text-center">
-      <h2 className="font-inter font-medium md:text-7xl lg:text-[90px] xl:text-[110px] leading-[115px] inline-block md:mb-6">
+      <h2 className="font-medium md:text-7xl lg:text-[90px] xl:text-[110px] leading-[115px] inline-block md:mb-6">
         404 Not Found
       </h2>
 

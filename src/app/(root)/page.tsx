@@ -1,17 +1,16 @@
-import { Footer, Header, Hero_1 } from "@/components";
+import { Footer, Hero_1 } from "@/components";
 
-const Home_1 = () => {
+const HomePage_1 = () => {
   return (
     <>
-      <Header />
       <main className="flex-1">
         <Hero_1 />
 
-        <div className="flex-center">This is a test text</div>
+        <div className="flex-center">This is home 1</div>
       </main>
       <Footer />
     </>
   );
 };
 
-export default Home_1;
+export default HomePage_1;

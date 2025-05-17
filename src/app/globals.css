@@ -1,15 +1,9 @@
 @import "tailwindcss";
-@plugin "daisyui";
-
-:root {
-  --background: #ffffff;
-  --foreground: #000000;
+@plugin "daisyui" {
+  themes: light --default;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
   /* fonts */
   --font-poppins: var(--font-poppins);
   --font-inter: var(--font-inter);
@@ -17,8 +11,12 @@
 }
 
 @theme {
-  --breakpoint-xs: 30rem;
- 
+  --breakpoint-xs: 480px;
+  --breakpoint-2xl: 1440px;
+  --breakpoint-3xl: 1536px;
+
+  --color-primary-black: #121212;
+
   --color-secondary-blue: #377dff;
   --color-secondary-green: #38cb89;
   --color-secondary-orange: #ffab00;
@@ -32,39 +30,114 @@
   --color-neutral-6: #232627;
   --color-neutral-7: #141718;
 
-  /* --container: initial; */
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-menu-open: menu-open 0.3s ease-out;
+  --animate-slide-from-left: slide-from-left 0.3s ease-out;
+  --animate-slide-from-right: slide-from-right 0.3s ease-out;
+  --animate-scale-in-center: scale-in-center 0.3s ease-out;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes menu-open {
+    from {
+      opacity: 0;
+      transform: translateY(-1.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-from-left {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-from-right {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scale-in-center {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 }
 
 @layer base {
   *,
   html,
   body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-inter);
+    @apply m-0 p-0 box-border font-inter;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-medium font-poppins text-primary-black;
+  }
+
+  h6 {
+    @apply text-[28px];
+  }
+
+  button {
+    @apply cursor-pointer;
   }
 }
 
 @layer components {
-}
+  .wrapper {
+    @apply xl:max-w-[1120px] lg:max-w-[960px] md:max-w-[700px] sm:max-w-[580px] xs:max-w-[420px] max-w-[310px] mx-auto;
+  }
 
-@utility container {
-  padding-inline: 32px;
-  margin-inline: auto;
-  
-  @variant sm {
-    padding-inline: 20px;
+  .button-primary {
+    @apply bg-neutral-7 text-white font-medium text-lg px-4 py-2.5 rounded-md w-full text-center hover:bg-neutral-7/85 transition-colors;
+  }
+
+  .footer-link {
+    @apply text-neutral-1 hover:underline transition-colors text-sm;
+  }
+
+  .payment-partner {
+    @apply w-12 h-8 bg-white flex justify-center items-center rounded
   }
   
-  @variant lg {
-    padding-inline: 80px;
+  .caption-1 {
+    @apply text-sm text-neutral-3;
   }
-  
-  @variant xl {
-    padding-inline: 120px;
+
+  .caption-2 {
+    @apply text-xs text-neutral-3 font-poppins;
   }
 }
 

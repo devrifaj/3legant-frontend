@@ -1,1 +1,13 @@
-export {default as SearchIcon} from './search';
+export { default as SearchIcon } from "./search";
+export { default as DropDownIcon } from "./dropDown";
+export { default as UserIcon } from "./user";
+export { default as ShoppingBagIcon } from "./shoppingBag";
+export { default as CancelIcon } from "./cancel";
+export { default as MenuIcon } from "./menu";
+export { default as HeartIcon } from "./heart";
+export { default as InstagramIcon } from "./instagram";
+export { default as FacebookIcon } from "./facebook";
+export { default as YoutubeIcon } from "./youtube";
+export { default as ArrowRightMiniIcon } from "./arrowRightMini";
+export { default as TicketIcon } from "./ticket";
+export { default as ArrowRightIcon } from "./arrowRight";
