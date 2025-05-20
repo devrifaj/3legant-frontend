@@ -1,13 +1,12 @@
-import { Footer, Hero_1 } from "@/components";
+import { Footer, HeroSlider } from "@/components";
 
 const HomePage_1 = () => {
   return (
     <>
       <main className="flex-1">
-        <Hero_1 />
-
-        <div className="flex-center">This is home 1</div>
+        <HeroSlider />
       </main>
+      
       <Footer variant="home-1" />
     </>
   );

@@ -19,7 +19,7 @@ const Header = () => {
       <NotiOffer />
 
       {/* header */}
-      <header className="py-4">
+      <header className="py-1.5">
         <div className="wrapper">
           <nav className="flex-between">
             <div className="flex items-center gap-2">

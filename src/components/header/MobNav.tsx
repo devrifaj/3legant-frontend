@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Modal from "../ui/Modal";
 import Search from "./Search";
-import { navItems } from "@/constants/navigation";
+import { navItems } from "@/constants/navData";
 import {
   FacebookIcon,
   HeartIcon,

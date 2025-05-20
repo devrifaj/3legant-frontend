@@ -17,14 +17,16 @@ const Footer = ({ variant }: FooterProps) => {
             {/* logo */}
             <Link
               className="text-base md:text-lg lg:text-2xl text-white font-medium font-poppins inline-block"
-              href="/"
+              href={`${home2 ? "/home-2" : "/"}`}
             >
               3legant<span className="text-neutral-4">.</span>
             </Link>
 
             <div className="bg-neutral-4 xs:w-[1px] xs:h-6 w-6 h-[1px]"></div>
 
-            <p className="caption-1">{ home2 ? "Headphone Store" : "Gift & Decoration Store" }</p>
+            <p className="caption-1">
+              {home2 ? "Headphone Store" : "Gift & Decoration Store"}
+            </p>
           </div>
 
           {/* footer links */}

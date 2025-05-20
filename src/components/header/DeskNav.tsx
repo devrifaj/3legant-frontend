@@ -1,4 +1,4 @@
-import { navItems } from "@/constants/navigation";
+import { navItems } from "@/constants";
 import { DropDownIcon } from "@/icons";
 import Link from "next/link";
 

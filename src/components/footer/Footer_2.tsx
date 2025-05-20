@@ -46,7 +46,7 @@ const Footer_2 = ({ variant }: FooterProps) => {
               className={`text-2xl ${
                 home3 ? "text-white" : "text-black"
               } font-medium font-poppins mb-8 inline-block`}
-              href="/"
+              href={`${home3 ? "/home-3" : "/home-4"}`}
             >
               3legant<span className="text-neutral-4">.</span>
             </Link>
@@ -154,7 +154,7 @@ const Footer_2 = ({ variant }: FooterProps) => {
                 </li>
                 <li>
                   <Link className="text-sm hover:underline" href="/blog">
-                    Blog
+                    Articles
                   </Link>
                 </li>
                 <li>
@@ -295,7 +295,11 @@ const Footer_2 = ({ variant }: FooterProps) => {
 
             <div className="w-[1px] h-5 bg-neutral-4 hidden lg:block"></div>
 
-            <ul className={`${home3 ? "text-neutral-4" : "text-neutral-7"} flex lg:gap-4 gap-8 mb-4 lg:mb-0`}>
+            <ul
+              className={`${
+                home3 ? "text-neutral-4" : "text-neutral-7"
+              } flex lg:gap-4 gap-8 mb-4 lg:mb-0`}
+            >
               <li>
                 <Link
                   className="text-xs hover:underline"

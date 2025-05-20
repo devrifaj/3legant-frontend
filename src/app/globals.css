@@ -4,7 +4,6 @@
 }
 
 @theme inline {
-  /* fonts */
   --font-poppins: var(--font-poppins);
   --font-inter: var(--font-inter);
   --font-space-grotesk: var(--font-space-grotesk);
@@ -129,15 +128,32 @@
   }
 
   .payment-partner {
-    @apply w-12 h-8 bg-white flex justify-center items-center rounded
+    @apply w-12 h-8 bg-white flex justify-center items-center rounded;
   }
-  
+
   .caption-1 {
     @apply text-sm text-neutral-3;
   }
 
   .caption-2 {
     @apply text-xs text-neutral-3 font-poppins;
+  }
+
+  .swiper-pagination {
+    @apply absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex gap-4 items-center justify-center z-20;
+  }
+
+  .swiper-pagination-bullet {
+    @apply inline-block rounded-full bg-neutral-1 opacity-100 cursor-pointer transition-all duration-300;
+    margin: 0 !important;
+  }
+
+  .swiper-pagination-bullet:hover {
+    @apply bg-neutral-1;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply rounded bg-neutral-1 pointer-events-none;
   }
 }
 
