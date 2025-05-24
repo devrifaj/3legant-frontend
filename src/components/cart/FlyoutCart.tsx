@@ -132,7 +132,7 @@ const FlyoutCart = ({ isCartOpen, setCartOpen }: FlyoutCartProps) => {
           </span>
 
           {/* checkout link */}
-          <Link className="button-primary inline-block mb-4" href="/checkout">
+          <Link className="primary-button inline-block mb-4" href="/checkout">
             Checkout
           </Link>
 

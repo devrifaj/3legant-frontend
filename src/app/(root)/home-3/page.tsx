@@ -1,10 +1,11 @@
-import { Footer_2 } from "@/components";
+import { BannerGrid, Footer_2 } from "@/components";
+import { home3BannerGridData } from "@/constants";
 
 const HomePage_3 = () => {
   return (
     <>
       <main className="flex-1">
-        <div className="flex-center">This is home 3</div>
+        <BannerGrid data={home3BannerGridData} />
       </main>
       <Footer_2 variant="home-3" />
     </>

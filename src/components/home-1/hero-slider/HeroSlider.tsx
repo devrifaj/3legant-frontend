@@ -71,9 +71,8 @@ const HeroSlider = () => {
           slidesPerView={1}
           spaceBetween={0}
           autoplay={{
-            delay: 5000,
+            delay: 3000,
             disableOnInteraction: false,
-            pauseOnMouseEnter: true,
           }}
           loop={true}
           keyboard={{
@@ -85,7 +84,7 @@ const HeroSlider = () => {
               return `<span class="${className} w-2.5 h-2.5"></span>`;
             },
           }}
-          className="w-full h-[305px] xs:h-[350px] sm:h-[400px] md:h-[450px] lg:h-[535px] overflow-hidden mb-8"
+          className="w-full h-[305px] xs:h-[350px] sm:h-[400px] md:h-[450px] lg:h-[535px] overflow-hidden"
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>

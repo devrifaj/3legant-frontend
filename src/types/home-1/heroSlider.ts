@@ -3,11 +3,11 @@ export interface SlideItem {
   image: string;
 }
 
+export interface SliderItemProps {
+  slide: SlideItem;
+}
+
 export interface SliderControlsProps {
   onPrevClick: () => void;
   onNextClick: () => void;
-}
-
-export interface SliderItemProps {
-  slide: SlideItem;
 }

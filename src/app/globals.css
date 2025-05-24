@@ -29,6 +29,9 @@
   --color-neutral-6: #232627;
   --color-neutral-7: #141718;
 
+  --shadow-favorite-btn: 0px 8px 16px -8px #0f0f0f1f;
+  --shadow-add-to-cart-btn: 0px 8px 16px 0px #00000009;
+
   --animate-fade-in: fade-in 0.3s ease-out;
   --animate-menu-open: menu-open 0.3s ease-out;
   --animate-slide-from-left: slide-from-left 0.3s ease-out;
@@ -105,6 +108,14 @@
     @apply font-medium font-poppins text-primary-black;
   }
 
+  h2 {
+    @apply text-[40px] leading-[44px] md:leading-[var(--tw-leading,_var(--text-7xl--line-height))] md:text-5xl lg:text-7xl;
+  }
+
+  h5 {
+    @apply text-[28px] lg:text-[34px];
+  }
+
   h6 {
     @apply text-[28px];
   }
@@ -117,10 +128,6 @@
 @layer components {
   .wrapper {
     @apply xl:max-w-[1120px] lg:max-w-[960px] md:max-w-[700px] sm:max-w-[580px] xs:max-w-[420px] max-w-[310px] mx-auto;
-  }
-
-  .button-primary {
-    @apply bg-neutral-7 text-white font-medium text-lg px-4 py-2.5 rounded-md w-full text-center hover:bg-neutral-7/85 transition-colors;
   }
 
   .footer-link {
@@ -139,6 +146,11 @@
     @apply text-xs text-neutral-3 font-poppins;
   }
 
+  .section-title {
+    @apply md:text-[40px] text-[34px] leading-9 md:leading-11 font-medium text-black font-poppins;
+  }
+
+  /* swiper custom styles */
   .swiper-pagination {
     @apply absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex gap-4 items-center justify-center z-20;
   }
@@ -168,5 +180,9 @@
 
   .flex-start {
     @apply flex justify-start items-center;
+  }
+
+  .primary-btn {
+    @apply bg-neutral-7 text-white font-medium text-lg px-4 py-2.5 rounded-md w-full text-center hover:bg-neutral-7/85 transition-colors;
   }
 }

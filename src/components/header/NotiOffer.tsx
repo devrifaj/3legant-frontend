@@ -24,7 +24,7 @@ const NotiOffer = () => {
           }  py-2`}
         >
           <div className="wrapper">
-            <div className="gap-3 flex-center flex-wrap relative">
+            <div className="xs:gap-3 gap-x-2 flex-center flex-wrap relative">
               <TicketIcon
                 className={`${
                   (home1 && "text-neutral-7") ||

@@ -101,7 +101,7 @@ const MobNav = ({ isMenuOpen, setMenuOpen }: MobNavProps) => {
 
           {/* sign in link */}
           <Link
-            className="button-primary inline-block mb-5"
+            className="primary-button inline-block mb-5"
             href="/sign-in"
             onClick={() => setMenuOpen(false)}
           >

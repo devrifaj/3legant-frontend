@@ -14,7 +14,7 @@ import {
   Paypal,
   Stripe,
   Visa,
-} from "@/images";
+} from "@/icons";
 import Link from "next/link";
 import { useState } from "react";
 

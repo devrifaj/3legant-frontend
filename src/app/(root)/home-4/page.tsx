@@ -1,10 +1,10 @@
-import { Footer_2 } from "@/components";
+import { Footer_2, WhyChooseUs } from "@/components";
 
 const HomePage_4 = () => {
   return (
     <>
       <main className="flex-1">
-        <div className="flex-center">This is home 4</div>
+        <WhyChooseUs variant="home-4" />
       </main>
       <Footer_2 variant="home-4" />
     </>
