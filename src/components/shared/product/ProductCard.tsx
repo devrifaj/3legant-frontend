@@ -60,10 +60,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
 
         {/* Favorite Button */}
-        <div className="absolute top-4 right-4 lg:translate-x-20 lg:opacity-0 lg:group-hover:translate-x-0 lg:group-hover:opacity-100 transition-all duration-700">
+        <div className="absolute top-4 right-4 lg:translate-x-20 lg:opacity-0 lg:group-hover:translate-x-0 lg:group-hover:opacity-100 transition-all duration-700 ">
           <button
             onClick={() => toggleFavorite(_id)}
-            className="w-8 h-8 btn btn-circle border-0 bg-white shadow-favorite-btn"
+            className="w-8 h-8 btn btn-circle border-0 bg-white shadow-favorite-btn flex-center"
           >
             {isFavorite ? <HeartFillIcon /> : <HeartLineIcon />}
           </button>

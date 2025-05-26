@@ -112,6 +112,10 @@
     @apply text-[40px] leading-[44px] md:leading-[var(--tw-leading,_var(--text-7xl--line-height))] md:text-5xl lg:text-7xl;
   }
 
+  h4 {
+    @apply lg:text-[40px] text-[34px] leading-[38px] lg:leading-[44px] text-neutral-7
+  }
+
   h5 {
     @apply text-[28px] lg:text-[34px];
   }

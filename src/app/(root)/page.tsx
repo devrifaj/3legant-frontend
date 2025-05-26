@@ -1,7 +1,9 @@
 import {
   BannerGrid,
+  Blog,
   Footer,
   HeroSlider,
+  Home1Banner,
   NewArrival,
   Tagline,
   WhyChooseUs,
@@ -17,6 +19,8 @@ const HomePage_1 = () => {
         <BannerGrid data={home1BannerGridData} />
         <NewArrival />
         <WhyChooseUs variant="home-1" />
+        <Home1Banner />
+        <Blog />
       </main>
 
       <Footer variant="home-1" />

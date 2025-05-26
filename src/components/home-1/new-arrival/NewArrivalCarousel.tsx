@@ -44,7 +44,6 @@ const NewArrivalCarousel = ({
         }}
         slidesPerView={1.45}
         spaceBetween={16}
-        grabCursor={true}
         className="mb-10 md:!pb-[52px]"
         breakpoints={{
           480: {

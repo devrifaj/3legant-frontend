@@ -11,7 +11,7 @@ const NotFound = () => {
       <p className="mb-12 xl:mb-20">
         Your visited page not found. You may go home page.
       </p>
-      <Link className="primary-button inline-block" href="/">
+      <Link className="primary-btn inline-block" href="/">
         Back to home page
       </Link>
     </div>

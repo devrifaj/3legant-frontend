@@ -11,6 +11,8 @@ export { default as home1NewArrivalImg3 } from "./home-1/new-arrival/img_3.jpg";
 export { default as home1NewArrivalImg4 } from "./home-1/new-arrival/img_4.jpg";
 export { default as home1NewArrivalImg5 } from "./home-1/new-arrival/img_5.jpg";
 
+export { default as home1BannerImg } from "./home-1/banner_img.jpg";
+
 // home 2
 export { default as home2BannerImg1 } from "./home-2/banner-grid/img_1.png";
 export { default as home2BannerImg2 } from "./home-2/banner-grid/img_2.jpg";

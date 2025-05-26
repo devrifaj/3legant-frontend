@@ -11,8 +11,8 @@ const SliderItem = ({ slide }: SliderItemProps) => {
           priority
           width={800}
           height={800}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-          className="object-cover object-center w-full h-full"
+          // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+          className="object-cover object-center w-full h-full bg-[linear-gradient(180deg,rgba(52,56,57,0)_83.21%,rgba(52,56,57,0.4)_100%)]"
         />
       </div>
     </div>

@@ -7,6 +7,7 @@ export { default as BannerGrid } from "./shared/BannerGrid";
 export { default as ProductCard } from "./shared/product/ProductCard";
 export { default as ProductCardSkeleton } from "./shared/product/ProductCardSkeleton";
 export { default as WhyChooseUs } from "./shared/WhyChooseUs";
+export { default as Blog } from "./shared/blog/Blog";
 
 // header
 export { default as Header } from "./header/Header";
@@ -19,6 +20,7 @@ export { default as Footer_2 } from "./footer/Footer_2";
 export { default as HeroSlider } from "./home-1/hero-slider/HeroSlider";
 export { default as Tagline } from "./home-1/Tagline";
 export { default as NewArrival } from "./home-1/new-arrival/NewArrival";
+export { default as Home1Banner } from "./home-1/Home1Banner";
 
 // home 2
 export { default as Hero_2 } from "./home-2/Hero";

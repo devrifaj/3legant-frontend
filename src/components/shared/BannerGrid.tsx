@@ -23,19 +23,23 @@ const BannerGrid = ({ data }: BannerGridProps) => {
 
             return (
               <div key={index} className={`${containerClass} bg-neutral-2`}>
-                <div className={`relative w-full h-full`}>
+                <div className="relative w-full h-full">
                   {/* text */}
                   <div
                     className={`flex flex-col justify-end ${textPositionClass} h-full`}
                   >
-                    <h5 className="text-neutral-7">{item.title}</h5>
-                    <Link
-                      className="underline text-neutral-7 inline-flex gap-1 items-center font-medium text-sm lg:text-base"
-                      href={item.linkUrl}
-                    >
-                      {item.linkText}{" "}
-                      <ArrowRightIcon className="lg:w-5 lg:h-5 h-4 w-4" />
-                    </Link>
+                    <div>
+                      <h5 className="text-neutral-7">{item.title}</h5>
+                      <Link
+                        className="text-neutral-7 inline-flex gap-1 items-center font-medium text-sm lg:text-base group border-b border-neutral-7"
+                        href={item.linkUrl}
+                      >
+                        {item.linkText}{" "}
+                        <span className="group-hover:translate-x-1 transition-transform">
+                          <ArrowRightIcon className="lg:w-5 lg:h-5 h-4 w-4" />
+                        </span>
+                      </Link>
+                    </div>
                   </div>
 
                   {/* image */}
