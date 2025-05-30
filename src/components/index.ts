@@ -8,6 +8,7 @@ export { default as ProductCard } from "./shared/product/ProductCard";
 export { default as ProductCardSkeleton } from "./shared/product/ProductCardSkeleton";
 export { default as WhyChooseUs } from "./shared/WhyChooseUs";
 export { default as Blog } from "./shared/blog/Blog";
+export { default as NewsLetter } from "./shared/NewsLetter";
 
 // header
 export { default as Header } from "./header/Header";
@@ -24,6 +25,9 @@ export { default as Home1Banner } from "./home-1/Home1Banner";
 
 // home 2
 export { default as Hero_2 } from "./home-2/Hero";
+
+// home 3
+export { default as InstaNewsFeed } from "./home-3/InstaNewsFeed";
 
 // cart
 export { default as FlyoutCart } from "./cart/FlyoutCart";

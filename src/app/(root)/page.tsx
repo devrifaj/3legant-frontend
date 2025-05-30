@@ -5,10 +5,11 @@ import {
   HeroSlider,
   Home1Banner,
   NewArrival,
+  NewsLetter,
   Tagline,
   WhyChooseUs,
 } from "@/components";
-import { home1BannerGridData } from "@/constants";
+import { home1BannerGridData, home1BlogData } from "@/constants";
 
 const HomePage_1 = () => {
   return (
@@ -20,7 +21,8 @@ const HomePage_1 = () => {
         <NewArrival />
         <WhyChooseUs variant="home-1" />
         <Home1Banner />
-        <Blog />
+        <Blog variant="home1" blogs={home1BlogData} />
+        <NewsLetter variant="home1" />
       </main>
 
       <Footer variant="home-1" />

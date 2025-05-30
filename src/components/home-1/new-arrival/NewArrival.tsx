@@ -21,10 +21,10 @@ const NewArrival = () => {
 
           {/* desktop more products link */}
           <Link
-            className="md:flex items-center gap-1 text-neutral-7 font-medium underline text-base hidden"
+            className="md:flex items-center gap-1 text-neutral-7 font-medium text-base hidden border-b border-neutral-7 group"
             href="#"
           >
-            More Products <ArrowRightIcon className="w-5 h-5" />
+            More Products <span className="group-hover:translate-x-1 transition-transform"><ArrowRightIcon className="w-5 h-5" /></span>
           </Link>
         </div>
       </div>

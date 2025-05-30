@@ -13,12 +13,34 @@ export { default as home1NewArrivalImg5 } from "./home-1/new-arrival/img_5.jpg";
 
 export { default as home1BannerImg } from "./home-1/banner_img.jpg";
 
+export { default as home1BlogImg1 } from "./home-1/blog/img_1.jpg";
+export { default as home1BlogImg2 } from "./home-1/blog/img_2.jpg";
+export { default as home1BlogImg3 } from "./home-1/blog/img_3.jpg";
+
+export { default as home1LeftNewsLetter } from "./home-1/news-letter/left_img.jpg";
+export { default as home1RightNewsLetter } from "./home-1/news-letter/right_img.jpg";
+
 // home 2
 export { default as home2BannerImg1 } from "./home-2/banner-grid/img_1.png";
 export { default as home2BannerImg2 } from "./home-2/banner-grid/img_2.jpg";
 export { default as home2BannerImg3 } from "./home-2/banner-grid/img_3.jpg";
 
+export { default as home2LeftNewsLetter } from "./home-2/news-letter/left_img.jpg";
+export { default as home2RightNewsLetter } from "./home-2/news-letter/right_img.jpg";
+
 // home 3
 export { default as home3BannerImg1 } from "./home-3/banner-grid/img_1.png";
 export { default as home3BannerImg2 } from "./home-3/banner-grid/img_2.png";
 export { default as home3BannerImg3 } from "./home-3/banner-grid/img_3.png";
+
+export { default as home3BlogImg1 } from "./home-3/blog/img_1.jpg";
+export { default as home3BlogImg2 } from "./home-3/blog/img_2.jpg";
+export { default as home3BlogImg3 } from "./home-3/blog/img_3.jpg";
+
+export { default as home3LeftNewsLetter } from "./home-3/news-letter/left_img.jpg";
+export { default as home3RightNewsLetter } from "./home-3/news-letter/right_img.jpg";
+
+// home 4
+export { default as home4BlogImg1 } from "./home-4/blog/img_1.jpg";
+export { default as home4BlogImg2 } from "./home-4/blog/img_2.jpg";
+export { default as home4BlogImg3 } from "./home-4/blog/img_3.jpg";

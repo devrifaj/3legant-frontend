@@ -31,6 +31,7 @@
 
   --shadow-favorite-btn: 0px 8px 16px -8px #0f0f0f1f;
   --shadow-add-to-cart-btn: 0px 8px 16px 0px #00000009;
+  --shadow-dropdown: 0px 64px 64px -48px #0F0F0F1A;
 
   --animate-fade-in: fade-in 0.3s ease-out;
   --animate-menu-open: menu-open 0.3s ease-out;

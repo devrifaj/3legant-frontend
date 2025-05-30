@@ -24,12 +24,12 @@ const DeskNav = () => {
             </Link>
 
             {/* dropdown menu */}
-            <ul className="absolute top-12 -left-2 min-w-52 bg-white z-20 border border-neutral-3 px-4 py-5 rounded transition ease-in-out duration-200 opacity-0 invisible group-hover/item:flex flex-col gap-1 text-sm group-hover/item:opacity-100 group-hover/item:visible [box-shadow:0_0_3px_#00000026]">
+            <ul className="absolute top-12 -left-2 min-w-60 bg-white z-20 border-[1.5px] border-neutral-2 shadow-dropdown px-3 py-2 rounded-xl transition ease-in-out duration-200 opacity-0 invisible group-hover/item:flex flex-col gap-2 text-sm group-hover/item:opacity-100 group-hover/item:visible">
               {item.children.map((child) => (
                 <li className="relative group/link" key={child.label}>
                   {/* dropdown top link */}
                   <Link
-                    className="flex-between gap-1 p-2 text-neutral-4 group-hover/link:text-neutral-7 w-full transition-all duration-200"
+                    className="flex-between gap-1 p-2 text-neutral-4 group-hover/link:text-neutral-7 group-hover/link:bg-neutral-2 rounded-lg w-full transition-all duration-200"
                     href={child.route}
                   >
                     {child.label}
@@ -42,12 +42,12 @@ const DeskNav = () => {
 
                   {/* if dropdown has children, render it as a dropdown */}
                   {child.children && (
-                    <ul className="absolute -right-[125%] top-2 min-w-52 bg-white z-20 border border-neutral-3 px-4 py-3 transition ease-in-out duration-200 opacity-0 invisible group-hover:/link:flex flex-col gap-1 text-sm group-hover/link:opacity-100 group-hover/link:visible [box-shadow:0_0_3px_#00000026] rounded">
+                    <ul className="absolute -right-[100%] top-1 min-w-52 bg-white z-20 border-[1.5px] border-neutral-2 shadow-dropdown px-3 py-2 transition ease-in-out duration-200 opacity-0 invisible group-hover:/link:flex flex-col gap-2 text-sm group-hover/link:opacity-100 group-hover/link:visible rounded-xl">
                       {child.children.map((subChild) => (
                         <li key={subChild.label}>
                           {/* dropdown child link */}
                           <Link
-                            className="p-2 text-neutral-4 hover:text-black w-full transition-all duration-200 inline-block"
+                            className="p-2 text-neutral-4 hover:text-neutral-7 hover:bg-neutral-2 rounded-lg w-full transition-all duration-200 inline-block"
                             href={subChild.route}
                           >
                             {subChild.label}

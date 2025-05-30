@@ -11,6 +11,7 @@ export { default as YoutubeIcon } from "./youtube";
 
 export { default as TicketIcon } from "./ticket";
 export { default as CheckedFillIcon } from "./checkedFill";
+export { default as EmailIcon } from "./email";
 
 export { default as ArrowLeftIcon } from "./arrowLeft";
 export { default as ArrowRightIcon } from "./arrowRight";

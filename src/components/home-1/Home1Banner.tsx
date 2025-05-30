@@ -14,6 +14,7 @@ const Home1Banner = () => {
             alt="banner"
             fill
             className="object-cover object-center"
+            draggable={false}
           />
         </div>
 
