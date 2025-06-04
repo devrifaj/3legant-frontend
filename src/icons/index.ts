@@ -16,6 +16,8 @@ export { default as EmailIcon } from "./email";
 export { default as ArrowLeftIcon } from "./arrowLeft";
 export { default as ArrowRightIcon } from "./arrowRight";
 export { default as ArrowRightMiniIcon } from "./arrowRightMini";
+export { default as ArrowLeft2Icon } from "./arrowLeft2";
+export { default as ArrowRight2Icon } from "./arrowRight2";
 
 export { default as HeartLineIcon } from "./heartLine";
 export { default as HeartFillIcon } from "./heartFill";

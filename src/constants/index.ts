@@ -9,6 +9,7 @@ export * from "./home-1/blogData";
 
 // home 2
 export * from "./home-2/bannerGridData";
+export * from "./home-2/brandLogoSliderData";
 
 // home 3
 export * from "./home-3/bannerGridData";
@@ -16,3 +17,4 @@ export * from "./home-3/blogData";
 
 // home 4
 export * from "./home-4/blogData";
+export * from "./home-4/brandLogoSliderData";

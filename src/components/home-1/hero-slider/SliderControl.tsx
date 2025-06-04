@@ -8,7 +8,7 @@ const SliderControl = ({
   onNextClick,
 }: SliderControlsProps) => {
   const baseButtonStyles =
-    "flex items-center justify-center w-[52px] h-[52px] rounded-full bg-white text-neutral-4 shadow-[0px_8px_16px_0px_#00000009] transition-all duration-300 hover:bg-text-neutral-7 focus:outline-none";
+    "flex items-center justify-center w-[52px] h-[52px] rounded-full bg-white text-neutral-4 shadow-[0px_8px_16px_0px_#00000009] transition-all duration-300  focus:outline-none";
 
   return (
     <div className="absolute top-1/2 -translate-y-1/2 z-10 left-1/2 -translate-x-1/2 w-full hidden md:block">

@@ -19,7 +19,7 @@ const Header = () => {
       <NotiOffer />
 
       {/* header */}
-      <header className="py-1.5">
+      <header className="py-1.5 z-30">
         <div className="wrapper">
           <nav className="flex-between">
             <div className="flex items-center gap-2">
@@ -33,7 +33,7 @@ const Header = () => {
 
               {/* logo */}
               <Link
-                className="text-base md:text-lg lg:text-2xl text-black font-medium font-poppins"
+                className="text-base font-medium text-black md:text-lg lg:text-2xl font-poppins"
                 href="/"
               >
                 3legant<span className="text-neutral-4">.</span>
@@ -47,7 +47,7 @@ const Header = () => {
             <div className="flex gap-4">
               {/* desktop search */}
               <button
-                className="hover:scale-105 xs:block hidden"
+                className="hidden hover:scale-105 xs:block"
                 onClick={() => setSearchOpen(true)}
               >
                 <SearchIcon />

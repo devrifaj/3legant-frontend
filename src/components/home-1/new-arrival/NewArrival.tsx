@@ -24,7 +24,10 @@ const NewArrival = () => {
             className="md:flex items-center gap-1 text-neutral-7 font-medium text-base hidden border-b border-neutral-7 group"
             href="#"
           >
-            More Products <span className="group-hover:translate-x-1 transition-transform"><ArrowRightIcon className="w-5 h-5" /></span>
+            More Products{" "}
+            <span className="group-hover:translate-x-1 transition-transform">
+              <ArrowRightIcon className="w-5 h-5" />
+            </span>
           </Link>
         </div>
       </div>

@@ -31,7 +31,7 @@
 
   --shadow-favorite-btn: 0px 8px 16px -8px #0f0f0f1f;
   --shadow-add-to-cart-btn: 0px 8px 16px 0px #00000009;
-  --shadow-dropdown: 0px 64px 64px -48px #0F0F0F1A;
+  --shadow-dropdown: 0px 64px 64px -48px #0f0f0f1a;
 
   --animate-fade-in: fade-in 0.3s ease-out;
   --animate-menu-open: menu-open 0.3s ease-out;
@@ -97,7 +97,7 @@
   *,
   html,
   body {
-    @apply m-0 p-0 box-border font-inter;
+    @apply box-border p-0 m-0 font-inter;
   }
 
   h1,
@@ -109,12 +109,16 @@
     @apply font-medium font-poppins text-primary-black;
   }
 
+  h1 {
+    @apply xl:text-[80px] lg:text-6xl sm:text-5xl text-[40px] xl:leading-[84px] lg:leading-14 leading-11 lg:-tracking-[3px] -tracking-[0.4px];
+  }
+
   h2 {
     @apply text-[40px] leading-[44px] md:leading-[var(--tw-leading,_var(--text-7xl--line-height))] md:text-5xl lg:text-7xl;
   }
 
   h4 {
-    @apply lg:text-[40px] text-[34px] leading-[38px] lg:leading-[44px] text-neutral-7
+    @apply lg:text-[40px] text-[34px] leading-[38px] lg:leading-[44px] text-neutral-7;
   }
 
   h5 {
@@ -136,11 +140,11 @@
   }
 
   .footer-link {
-    @apply text-neutral-1 hover:underline transition-colors text-sm;
+    @apply text-sm transition-colors text-neutral-1 hover:underline;
   }
 
   .payment-partner {
-    @apply w-12 h-8 bg-white flex justify-center items-center rounded;
+    @apply flex items-center justify-center w-12 h-8 bg-white rounded;
   }
 
   .caption-1 {
@@ -157,11 +161,11 @@
 
   /* swiper custom styles */
   .swiper-pagination {
-    @apply absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex gap-4 items-center justify-center z-20;
+    @apply absolute z-20 flex items-center justify-center gap-4 -translate-x-1/2 bottom-4 md:bottom-8 left-1/2;
   }
 
   .swiper-pagination-bullet {
-    @apply inline-block rounded-full bg-neutral-1 opacity-100 cursor-pointer transition-all duration-300;
+    @apply inline-block transition-all duration-300 rounded-full opacity-100 cursor-pointer bg-neutral-1;
     margin: 0 !important;
   }
 
@@ -170,21 +174,26 @@
   }
 
   .swiper-pagination-bullet-active {
-    @apply rounded bg-neutral-1 pointer-events-none;
+    @apply rounded pointer-events-none bg-neutral-1;
   }
 }
 
 @layer utilities {
   .flex-center {
-    @apply flex justify-center items-center;
+    @apply flex items-center justify-center;
   }
 
   .flex-between {
-    @apply flex justify-between items-center;
+    @apply flex items-center justify-between;
   }
 
   .flex-start {
-    @apply flex justify-start items-center;
+    @apply flex items-center justify-start;
+  }
+
+  .custom-orange-gradient {
+    background: linear-gradient(0deg, #fec75a, #fec75a),
+      linear-gradient(180.02deg, #ffc95c 17.32%, rgba(255, 201, 92, 0) 29.19%);
   }
 
   .primary-btn {

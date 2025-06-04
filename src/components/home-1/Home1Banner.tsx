@@ -21,7 +21,7 @@ const Home1Banner = () => {
         {/* Banner Content */}
         <div className="lg:w-1/2 w-full bg-neutral-2 pl-8 sm:pl-[72px] py-14 lg:py-0 flex flex-col justify-center">
           <div>
-            <span className="text-base text-secondary-blue font-bold inline-block mb-4">
+            <span className="inline-block mb-4 text-base font-bold text-secondary-blue">
               SALE UP TO 35% OFF
             </span>
 
@@ -36,12 +36,12 @@ const Home1Banner = () => {
             </p>
 
             <Link
-              className="inline-flex gap-1 items-center text-neutral-7 text-sm md:text-base font-medium border-b border-neutral-7 group"
+              className="inline-flex items-center gap-1 text-sm font-medium border-b text-neutral-7 md:text-base border-neutral-7 group"
               href="/collections"
             >
               Shop Now
-              <span className="group-hover:translate-x-1 transition-transform">
-                <ArrowRightIcon className="md:w-5 md:h-5 h-4 w-4" />
+              <span className="transition-transform group-hover:translate-x-1">
+                <ArrowRightIcon className="w-4 h-4 md:w-5 md:h-5" />
               </span>
             </Link>
           </div>
