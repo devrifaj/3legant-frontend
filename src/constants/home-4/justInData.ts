@@ -1,0 +1,122 @@
+import {
+  home4JustInImg1,
+  home4JustInImg2,
+  home4JustInImg3,
+  home4JustInImg4,
+  home4JustInImg5,
+} from "@/images";
+
+export const home4JustInData = [
+  {
+    _id: "1",
+    name: "96 Nuptse Dip Dye Korea Puffers Jacket",
+    description:
+      "A stylish and comfortable loveseat sofa, perfect for modern living rooms.",
+    price: 400.0,
+    imageUrl: home4JustInImg1.src,
+    rating: 5,
+    isNewItem: true,
+    category: "winter",
+  },
+  {
+    _id: "2",
+    name: "Paradigm Chilliwack Black Label Jacket",
+    description: "Greg Norman - Men's Shark Logo Golf Polo Shirt",
+    price: 349.99,
+    originalPrice: 449.99,
+    imageUrl: home4JustInImg2.src,
+    rating: 2.5,
+    isNewItem: true,
+    category: "winter",
+  },
+  {
+    _id: "3",
+    name: "1996 Retro Nuptse Jacket in Black",
+    description:
+      "A minimalist beige table lamp, ideal for bedside or desk lighting.",
+    price: 149.99,
+    imageUrl: home4JustInImg3.src,
+    rating: 4,
+    isNewItem: true,
+    category: "winter",
+  },
+  {
+    _id: "4",
+    name: "Paul Quilted Nylon Puffer bomber jacket",
+    description:
+      "A natural bamboo basket, great for stylish and eco-friendly storage.",
+    price: 300.0,
+    imageUrl: home4JustInImg4.src,
+    rating: 1,
+    isNewItem: true,
+    category: "winter",
+  },
+  {
+    _id: "5",
+    name: "Chilliwack jacket Bomber HUMANATURE",
+    description:
+      "A modern toaster with a premium finish, perfect for quick breakfasts.",
+    price: 1195.0,
+    originalPrice: 1495.0,
+    imageUrl: home4JustInImg5.src,
+    rating: 4.5,
+    isNewItem: true,
+    category: "winter",
+  },
+  {
+    _id: "6",
+    name: "96 Nuptse Dip Dye Korea Puffers Jacket",
+    description:
+      "A stylish and comfortable loveseat sofa, perfect for modern living rooms.",
+    price: 400.0,
+    imageUrl: home4JustInImg1.src,
+    rating: 5,
+    isNewItem: true,
+    category: "winter",
+  },
+  {
+    _id: "7",
+    name: "Paradigm Chilliwack Black Label Jacket",
+    description: "Greg Norman - Men's Shark Logo Golf Polo Shirt",
+    price: 349.99,
+    originalPrice: 449.99,
+    imageUrl: home4JustInImg2.src,
+    rating: 2.5,
+    isNewItem: true,
+    category: "winter",
+  },
+  {
+    _id: "8",
+    name: "1996 Retro Nuptse Jacket in Black",
+    description:
+      "A minimalist beige table lamp, ideal for bedside or desk lighting.",
+    price: 149.99,
+    imageUrl: home4JustInImg3.src,
+    rating: 4,
+    isNewItem: true,
+    category: "winter",
+  },
+  {
+    _id: "9",
+    name: "Paul Quilted Nylon Puffer bomber jacket",
+    description:
+      "A natural bamboo basket, great for stylish and eco-friendly storage.",
+    price: 300.0,
+    imageUrl: home4JustInImg4.src,
+    rating: 1,
+    isNewItem: true,
+    category: "winter",
+  },
+  {
+    _id: "10",
+    name: "Chilliwack jacket Bomber HUMANATURE",
+    description:
+      "A modern toaster with a premium finish, perfect for quick breakfasts.",
+    price: 1195.0,
+    originalPrice: 1495.0,
+    imageUrl: home4JustInImg5.src,
+    rating: 4.5,
+    isNewItem: true,
+    category: "winter",
+  },
+];

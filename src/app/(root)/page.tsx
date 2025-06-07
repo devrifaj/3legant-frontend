@@ -17,7 +17,7 @@ const HomePage_1 = () => {
       <main className="flex-1">
         <HeroSlider />
         <Tagline />
-        <BannerGrid data={home1BannerGridData} />
+        <BannerGrid variant="home1" data={home1BannerGridData} />
         <NewArrival />
         <WhyChooseUs variant="home-1" />
         <Home1Banner />

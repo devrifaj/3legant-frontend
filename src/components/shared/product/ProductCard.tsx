@@ -6,11 +6,21 @@ import { ProductCardProps } from "@/types";
 import Image from "next/image";
 import { useState } from "react";
 
-const ProductCard = ({ product }: ProductCardProps) => {
+const ProductCard = ({ product, variant, isBestSeller }: ProductCardProps) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [isCart, setIsCart] = useState(false);
-  const { _id, name, imageUrl, originalPrice, price, rating, isNewItem } =
-    product;
+  const {
+    _id,
+    name,
+    imageUrl,
+    originalPrice,
+    price,
+    rating,
+    isNewItem,
+    isHotItem,
+  } = product;
+
+  const isHome4 = variant === "home4";
 
   // handle add to favorite
   const toggleFavorite = (id: string) => {
@@ -33,17 +43,32 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <div className="relative overflow-hidden transition-all duration-300 h-full">
       {/* Product Image */}
-      <div className="relative bg-neutral-2 overflow-hidden h-[305px] md:h-[350px] w-full mb-3 group">
+      <div
+        className={`relative bg-neutral-2 overflow-hidden ${
+          isBestSeller ? "h-[250px] xs:h-[270px] sm:h-[305px]" : "h-[305px]"
+        } md:h-[350px] w-full mb-3 group`}
+      >
         <Image
           src={imageUrl}
           alt={name}
           width={400}
           height={400}
-          className="w-full h-full object-contain scale-75 md:scale-90 transition-transform duration-300 group-hover:scale-100 mix-blend-multiply"
+          className={`w-full h-full ${
+            isHome4
+              ? "object-cover group-hover:scale-110"
+              : "object-contain scale-75 md:scale-90 group-hover:scale-100"
+          } transition-transform duration-300 mix-blend-multiply`}
         />
 
         {/* New Item and Discount Badge */}
         <div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
+          {/* Hot Item Badge */}
+          {isHotItem && (
+            <span className="inline-block px-[14px] py-1 text-base font-bold text-neutral-7 bg-white rounded">
+              HOT
+            </span>
+          )}
+
           {/* New Item Badge */}
           {isNewItem && (
             <span className="inline-block px-[14px] py-0.5 text-base font-bold text-neutral-7 bg-white rounded">
@@ -73,7 +98,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <div className="absolute left-4 right-4 bottom-4 lg:translate-y-12 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 transition-all duration-500">
           <button
             onClick={() => toggleCart(_id)}
-            className="bg-neutral-7 text-base shadow-add-to-cart-btn font-medium py-[9px] text-neutral-1 rounded-lg  hover:bg-neutral-7/85 transition-colors w-full"
+            className="bg-neutral-7 text-base shadow-add-to-cart-btn font-medium py-[9px] text-neutral-1 rounded-lg  hover:bg-black-primary transition-colors w-full"
           >
             {isCart ? (
               <span className="flex-center gap-1">

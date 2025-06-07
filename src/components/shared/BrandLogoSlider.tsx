@@ -5,8 +5,6 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 
-// Swiper styles css
-// import "swiper/css";
 import useHasMounted from "@/hooks/useHasMounted";
 import { ArrowLeft2Icon, ArrowRight2Icon } from "@/icons";
 import { BrandLogoSliderProps } from "@/types";
