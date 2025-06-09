@@ -9,7 +9,7 @@ const BannerGrid = ({ variant, data }: BannerGridProps) => {
     <section className="wrapper">
       {/* section title */}
       {!isHome1 && (
-        <h4 className="section-title mb-4 lg:mb-12 text-center md:text-left">
+        <h4 className="section-title mb-4 lg:mb-12 text-center md:text-left pt-10 md:pt-12">
           Shop Collection
         </h4>
       )}

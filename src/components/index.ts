@@ -12,6 +12,8 @@ export { default as NewsLetter } from "./shared/NewsLetter";
 export { default as BrandLogoSlider } from "./shared/BrandLogoSlider";
 export { default as ProductCarousel } from "./shared/product/ProductCarousel";
 export { default as BestSeller } from "./shared/BestSeller";
+export { default as Banner } from "./shared/banner/Banner";
+export { default as InstagramNewsFeed } from "./shared/InstagramNewsFeed";
 
 // header
 export { default as Header } from "./header/Header";
@@ -28,10 +30,16 @@ export { default as Home1Banner } from "./home-1/Home1Banner";
 
 // home 2
 export { default as Home2Hero } from "./home-2/Home2Hero";
-export { default as Home2Banner } from "./home-2/banner/Home2Banner";
 
 // home 3
-export { default as InstaNewsFeed } from "./home-3/InstaNewsFeed";
+export { default as Home3ShopByCategories } from "./home-3/Home3ShopByCategories";
+export { default as Home3Hero } from "./home-3/Home3Hero";
+
+// home 4
+export { default as Home4Hero } from "./home-4/Home4Hero";
+export { default as Home4ShopByCategories } from "./home-4/Home4ShopByCategories";
+export { default as Home4BannerGrid } from "./home-4/Home4BannerGrid";
+export { default as Home4Video } from "./home-4/Home4Video";
 
 // cart
 export { default as FlyoutCart } from "./cart/FlyoutCart";

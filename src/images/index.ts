@@ -48,7 +48,15 @@ export { default as home2BestSellerImg1 } from "./home-2/best-seller/img_1.jpg";
 export { default as home2BestSellerImg2 } from "./home-2/best-seller/img_2.png";
 export { default as home2BestSellerImg3 } from "./home-2/best-seller/img_3.png";
 
+export { default as home2InstagramNewsFeedImg1 } from "./home-2/instagram-news-feed/img_1.jpg";
+export { default as home2InstagramNewsFeedImg2 } from "./home-2/instagram-news-feed/img_2.jpg";
+export { default as home2InstagramNewsFeedImg3 } from "./home-2/instagram-news-feed/img_3.jpg";
+export { default as home2InstagramNewsFeedImg4 } from "./home-2/instagram-news-feed/img_4.jpg";
+
 // home 3
+export { default as home3BannerImg } from "./home-3/banner_img.jpg";
+export { default as home3HeroImg } from "./home-3/hero_img.jpg";
+
 export { default as home3BannerImg1 } from "./home-3/banner-grid/img_1.png";
 export { default as home3BannerImg2 } from "./home-3/banner-grid/img_2.png";
 export { default as home3BannerImg3 } from "./home-3/banner-grid/img_3.png";
@@ -66,7 +74,30 @@ export { default as home3FeaturedImg3 } from "./home-3/featured/img_3.png";
 export { default as home3FeaturedImg4 } from "./home-3/featured/img_4.png";
 export { default as home3FeaturedImg5 } from "./home-3/featured/img_5.png";
 
+export { default as home3InstagramNewsFeedImg1 } from "./home-3/instagram-news-feed/img_1.jpg";
+export { default as home3InstagramNewsFeedImg2 } from "./home-3/instagram-news-feed/img_2.jpg";
+export { default as home3InstagramNewsFeedImg3 } from "./home-3/instagram-news-feed/img_3.jpg";
+export { default as home3InstagramNewsFeedImg4 } from "./home-3/instagram-news-feed/img_4.jpg";
+export { default as home3InstagramNewsFeedImg5 } from "./home-3/instagram-news-feed/img_5.jpg";
+export { default as home3InstagramNewsFeedImg6 } from "./home-3/instagram-news-feed/img_6.jpg";
+
+export { default as home3ShopByCategoriesImg1 } from "./home-3/shop-by-categories/img_1.jpg";
+export { default as home3ShopByCategoriesImg2 } from "./home-3/shop-by-categories/img_2.jpg";
+export { default as home3ShopByCategoriesImg3 } from "./home-3/shop-by-categories/img_3.jpg";
+export { default as home3ShopByCategoriesImg4 } from "./home-3/shop-by-categories/img_4.png";
+export { default as home3ShopByCategoriesImg5 } from "./home-3/shop-by-categories/img_5.png";
+export { default as home3ShopByCategoriesImg6 } from "./home-3/shop-by-categories/img_6.png";
+
 // home 4
+export { default as home4HeroImg } from "./home-4/hero_img.jpg";
+export { default as home4BannerImg } from "./home-4/banner_img.jpg";
+export { default as home4VideoThumbImg } from "./home-4/video_thumb.jpg";
+
+export { default as home4BannerImg1 } from "./home-4/banner-grid/img_1.jpg";
+export { default as home4BannerImg2 } from "./home-4/banner-grid/img_2.jpg";
+export { default as home4BannerImg3 } from "./home-4/banner-grid/img_3.jpg";
+export { default as home4BannerImg4 } from "./home-4/banner-grid/img_4.jpg";
+
 export { default as home4BlogImg1 } from "./home-4/blog/img_1.jpg";
 export { default as home4BlogImg2 } from "./home-4/blog/img_2.jpg";
 export { default as home4BlogImg3 } from "./home-4/blog/img_3.jpg";
@@ -84,7 +115,19 @@ export { default as home4JustInImg3 } from "./home-4/just-in/img_3.jpg";
 export { default as home4JustInImg4 } from "./home-4/just-in/img_4.jpg";
 export { default as home4JustInImg5 } from "./home-4/just-in/img_5.jpg";
 
+export { default as home4ShopByCategoriesImg1 } from "./home-4/shop-by-categories/img_1.jpg";
+export { default as home4ShopByCategoriesImg2 } from "./home-4/shop-by-categories/img_2.jpg";
+export { default as home4ShopByCategoriesImg3 } from "./home-4/shop-by-categories/img_3.jpg";
+export { default as home4ShopByCategoriesImg4 } from "./home-4/shop-by-categories/img_4.jpg";
+export { default as home4ShopByCategoriesImg5 } from "./home-4/shop-by-categories/img_5.jpg";
+export { default as home4ShopByCategoriesImg6 } from "./home-4/shop-by-categories/img_6.jpg";
+
 export { default as home4BestSellerImg1 } from "./home-4/best-seller/img_1.jpg";
 export { default as home4BestSellerImg2 } from "./home-4/best-seller/img_2.jpg";
 export { default as home4BestSellerImg3 } from "./home-4/best-seller/img_3.jpg";
 export { default as home4BestSellerImg4 } from "./home-4/best-seller/img_4.jpg";
+
+export { default as home4InstagramNewsFeedImg1 } from "./home-4/instagram-news-feed/img_1.jpg";
+export { default as home4InstagramNewsFeedImg2 } from "./home-4/instagram-news-feed/img_2.jpg";
+export { default as home4InstagramNewsFeedImg3 } from "./home-4/instagram-news-feed/img_3.jpg";
+export { default as home4InstagramNewsFeedImg4 } from "./home-4/instagram-news-feed/img_4.jpg";

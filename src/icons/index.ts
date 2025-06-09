@@ -4,6 +4,12 @@ export { default as UserIcon } from "./user";
 export { default as ShoppingBagIcon } from "./shoppingBag";
 export { default as MenuIcon } from "./menu";
 export { default as CancelIcon } from "./cancel";
+export { default as PlayFilledIcon } from "./playFilled";
+export { default as PauseIcon } from "./pause";
+export { default as VolumeIcon } from "./volume";
+export { default as VolumeMuteIcon } from "./volumeMute";
+export { default as MaximizeIcon } from "./maximize";
+export { default as Loader2Icon } from "./loader2";
 
 export { default as InstagramIcon } from "./instagram";
 export { default as FacebookIcon } from "./facebook";

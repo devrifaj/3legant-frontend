@@ -7,12 +7,15 @@ import {
   NewsLetter,
   ProductCarousel,
   WhyChooseUs,
-  Home2Banner,
+  InstagramNewsFeed,
+  Banner,
 } from "@/components";
 import {
+  home2BannerData,
   home2BannerGridData,
   home2BestSellerData,
   home2BrandLogoSliderData,
+  home2InstagramNewsFeedData,
   home2NewArrivalData,
 } from "@/constants";
 
@@ -25,8 +28,9 @@ const HomePage2 = () => {
         <ProductCarousel title="New Arrivals" products={home2NewArrivalData} />
         <BannerGrid data={home2BannerGridData} />
         <BestSeller products={home2BestSellerData} />
-        <Home2Banner />
+        <Banner bannerData={{...home2BannerData, variant: "home2"}} />
         <WhyChooseUs variant="home-2" />
+        <InstagramNewsFeed images={home2InstagramNewsFeedData} />
         <NewsLetter variant="home2" />
       </main>
       <Footer variant="home-2" />
