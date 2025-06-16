@@ -7,7 +7,6 @@ const NotiOffer = () => {
   const [isNotificationOpen, setNotificationOpen] = useState(true);
 
   const pathname = usePathname();
-  const home1 = pathname === "/";
   const home2 = pathname === "/home-2";
   const home3 = pathname === "/home-3";
   const home4 = pathname === "/home-4";
@@ -27,9 +26,10 @@ const NotiOffer = () => {
             <div className="xs:gap-3 gap-x-2 flex-center flex-wrap relative">
               <TicketIcon
                 className={`${
-                  (home1 && "text-neutral-7") ||
+                  (home2 && "text-neutral-1") ||
                   (home3 && "text-black") ||
-                  "text-neutral-1"
+                  (home4 && "text-neutral-1") ||
+                  "text-neutral-7"
                 } w-4 h-4 sm:w-6 sm:h-6`}
               />
               <p

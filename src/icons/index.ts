@@ -33,6 +33,12 @@ export { default as StarEmptyIcon } from "./starEmpty";
 export { default as StarFullIcon } from "./starFull";
 export { default as StarHalfIcon } from "./starHalf";
 
+export { default as CheckLineIcon } from "./checkLine";
+export { default as ChevronRightIcon } from "./chevronRight";
+export { default as MinusIcon } from "./minus";
+export { default as PlusIcon } from "./plus";
+export { default as CloseLineIcon } from "./closeLine";
+
 // why choose us
 export { default as TruckIcon } from "./why-choose-us/shipping";
 export { default as PaymentIcon } from "./why-choose-us/payment";

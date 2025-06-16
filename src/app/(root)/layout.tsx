@@ -1,6 +1,6 @@
-import { Header } from "@/components";
+import { Footer, Header } from "@/components";
 
-export default function HomeLayout({
+export default function MainLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -8,7 +8,8 @@ export default function HomeLayout({
   return (
     <>
       <Header />
-      {children}
+      <main className="flex-1">{children}</main>
+      <Footer variant="home-1" />
     </>
   );
 }

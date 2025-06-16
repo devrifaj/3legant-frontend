@@ -198,6 +198,6 @@
   }
 
   .primary-btn {
-    @apply bg-neutral-7 text-white font-medium text-lg px-4 py-2.5 rounded-md w-full text-center hover:bg-primary-black transition-colors;
+    @apply bg-neutral-7 text-white font-medium text-lg px-4 py-2.5 rounded-md w-full text-center hover:bg-gray-800 transition-colors;
   }
 }

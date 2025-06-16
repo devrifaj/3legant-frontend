@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
+
 import Modal from "../ui/Modal";
-import { DemoImage_1 } from "@/images";
-import { CancelIcon } from "@/icons";
+import MobileCartTable from "./MobileCartTable";
+
 
 type FlyoutCartProps = {
   isCartOpen: boolean;
@@ -20,94 +20,10 @@ const FlyoutCart = ({ isCartOpen, setCartOpen }: FlyoutCartProps) => {
         {/* cart title and cart table */}
         <div>
           {/* cart title */}
-          <h6 className="mb-6">Cart</h6>
+          <h6>Cart</h6>
 
           {/* cart table */}
-          <ul>
-            <li className="flex justify-between mb-6 last:mb-0 pb-6 border-b border-neutral-3">
-              {/* <div className="bg-neutral-2 w-full max-w-4xl object-right-top h-[200px] rounded-lg overflow-hidden bg-center bg-blend-darken bg-[url(https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNoYWlyfGVufDB8fDB8fHww)]">
-              </div> */}
-
-              <div className="flex gap-4">
-                <Image
-                  src={DemoImage_1}
-                  width={80}
-                  height={100}
-                  alt="demo image"
-                />
-
-                <div className="flex flex-col gap-1">
-                  <span className="text-sm font-semibold">Tray Table</span>
-
-                  <span className="text-xs text-neutral-4">Color: Black</span>
-
-                  {/* increase quantity */}
-                  <span>increase quantity</span>
-                </div>
-              </div>
-
-              <div className="flex items-end flex-col gap-2">
-                <span className="text-sm font-semibold">$19.19</span>
-                <button className="hover:scale-110">
-                  <CancelIcon className="text-neutral-4" />
-                </button>
-              </div>
-            </li>
-
-            <li className="flex justify-between mb-6 last:mb-0 pb-6 border-b border-neutral-3">
-              <div className="flex gap-4">
-                <Image
-                  src={DemoImage_1}
-                  width={80}
-                  height={100}
-                  alt="demo image"
-                />
-
-                <div className="flex flex-col gap-1">
-                  <span className="text-sm font-semibold">Tray Table</span>
-
-                  <span className="text-xs text-neutral-4">Color: Black</span>
-
-                  {/* increase quantity */}
-                  <span>increase quantity</span>
-                </div>
-              </div>
-
-              <div className="flex items-end flex-col gap-2">
-                <span className="text-sm font-semibold">$19.19</span>
-                <button className="hover:scale-110 ">
-                  <CancelIcon className="text-neutral-4" />
-                </button>
-              </div>
-            </li>
-
-            <li className="flex justify-between mb-6 last:mb-0 pb-6 border-b border-neutral-3">
-              <div className="flex gap-4">
-                <Image
-                  src={DemoImage_1}
-                  width={80}
-                  height={100}
-                  alt="demo image"
-                />
-
-                <div className="flex flex-col gap-1">
-                  <span className="text-sm font-semibold">Tray Table</span>
-
-                  <span className="text-xs text-neutral-4">Color: Black</span>
-
-                  {/* increase quantity */}
-                  <span>increase quantity</span>
-                </div>
-              </div>
-
-              <div className="flex items-end flex-col gap-2">
-                <span className="text-sm font-semibold">$19.19</span>
-                <button className="hover:scale-110 ">
-                  <CancelIcon className="text-neutral-4" />
-                </button>
-              </div>
-            </li>
-          </ul>
+          <MobileCartTable />
         </div>
 
         {/* cart summary, checkout link and view cart link */}

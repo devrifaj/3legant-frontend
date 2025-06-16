@@ -59,12 +59,12 @@ const Header = () => {
               </button>
 
               {/* cart icon */}
-              <button
+              <Link
                 className="hover:scale-105"
-                onClick={() => setCartOpen(true)}
+                href="/cart"
               >
                 <ShoppingBagIcon />
-              </button>
+              </Link>
             </div>
           </nav>
         </div>

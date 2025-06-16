@@ -14,6 +14,7 @@ export { default as ProductCarousel } from "./shared/product/ProductCarousel";
 export { default as BestSeller } from "./shared/BestSeller";
 export { default as Banner } from "./shared/banner/Banner";
 export { default as InstagramNewsFeed } from "./shared/InstagramNewsFeed";
+export { default as CheckoutSteps } from "./shared/CheckoutSteps";
 
 // header
 export { default as Header } from "./header/Header";
@@ -43,3 +44,7 @@ export { default as Home4Video } from "./home-4/Home4Video";
 
 // cart
 export { default as FlyoutCart } from "./cart/FlyoutCart";
+export { default as CartSummary } from "./cart/CartSummary";
+export { default as DesktopCartTable } from "./cart/DesktopCartTable";
+export { default as MobileCartTable } from "./cart/MobileCartTable";
+export { default as CartCoupon } from "./cart/CartCoupon";
