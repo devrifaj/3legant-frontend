@@ -12,7 +12,6 @@ import { useAppSelector } from "@/store/hooks";
 const Header = () => {
   const [isSearchOpen, setSearchOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isCartOpen, setCartOpen] = useState(false);
   
   const cartItems = useAppSelector((state) => state.cart.cartItems);
 
@@ -85,7 +84,7 @@ const Header = () => {
         <MobNav isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
 
         {/* flyout cart*/}
-        <FlyoutCart isCartOpen={isCartOpen} setCartOpen={setCartOpen} />
+        <FlyoutCart />
       </header>
     </>
   );
