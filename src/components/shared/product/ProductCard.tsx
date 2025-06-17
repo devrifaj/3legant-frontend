@@ -1,14 +1,18 @@
 "use client";
-
 import StarRating from "@/components/ui/StarRating";
 import { CheckedFillIcon, HeartFillIcon, HeartLineIcon } from "@/icons";
+import { addToCart, setCartOpen, removeFromCart } from "@/store/features/cart/cartSlice";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { ProductCardProps } from "@/types";
 import Image from "next/image";
 import { useState } from "react";
 
 const ProductCard = ({ product, variant, isBestSeller }: ProductCardProps) => {
   const [isFavorite, setIsFavorite] = useState(false);
-  const [isCart, setIsCart] = useState(false);
+  const dispatch = useAppDispatch();
+  const cartItems = useAppSelector((state) => state.cart.cartItems);
+  const isInCart = cartItems.some((item) => item._id === product._id);
+
   const {
     _id,
     name,
@@ -29,9 +33,13 @@ const ProductCard = ({ product, variant, isBestSeller }: ProductCardProps) => {
   };
 
   // handle add to cart
-  const toggleCart = (id: string) => {
-    console.log(id);
-    setIsCart(!isCart);
+  const toggleCart = () => {
+    if (isInCart) {
+      dispatch(removeFromCart(product._id));
+    } else {
+      dispatch(addToCart({...product, quantity: 1}));
+      dispatch(setCartOpen(true));
+    }
   };
 
   const discountPercentage = originalPrice
@@ -97,10 +105,10 @@ const ProductCard = ({ product, variant, isBestSeller }: ProductCardProps) => {
         {/* Add to Cart Button */}
         <div className="absolute left-4 right-4 bottom-4 lg:translate-y-12 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 transition-all duration-500">
           <button
-            onClick={() => toggleCart(_id)}
-            className="bg-neutral-7 text-base shadow-add-to-cart-btn font-medium py-[9px] text-neutral-1 rounded-lg  hover:bg-black-primary transition-colors w-full"
+            onClick={toggleCart}
+            className="bg-neutral-7 text-base shadow-add-to-cart-btn font-medium py-[9px] text-neutral-1 rounded-lg hover:bg-black-primary transition-colors w-full"
           >
-            {isCart ? (
+            {isInCart ? (
               <span className="flex-center gap-1">
                 <CheckedFillIcon />
                 Added

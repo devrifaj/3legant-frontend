@@ -1,17 +1,23 @@
+"use client";
+
 import { CloseLineIcon, MinusIcon, PlusIcon } from "@/icons";
-import { DemoImage_1 } from "@/images";
 import Image from "next/image";
-import React from "react";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { removeFromCart, updateQuantity } from "@/store/features/cart/cartSlice";
 
 const DesktopCartTable = () => {
-  const cartItems = [
-    {
-      _id: 1,
-      name: "Product 1",
-      price: 100,
-      imageUrl: DemoImage_1.src,
-    },
-  ];
+  const dispatch = useAppDispatch();
+  const cartItems = useAppSelector((state) => state.cart.cartItems);
+
+  const handleRemoveItem = (id: string) => {
+    dispatch(removeFromCart(id));
+  };
+
+  const handleUpdateQuantity = (id: string, newQuantity: number) => {
+    if (newQuantity >= 1) {
+      dispatch(updateQuantity({ id, quantity: newQuantity }));
+    }
+  };
 
   return (
     <div>
@@ -34,10 +40,13 @@ const DesktopCartTable = () => {
             </div>
             <div className="flex flex-col justify-center gap-2">
               <span className="text-sm font-semibold text-neutral-7">
-                Tray Table
+                {item.name}
               </span>
               <span className="text-xs text-neutral-4">Color: Black</span>
-              <button className="text-sm font-semibold text-neutral-4 hover:text-red-400 flex items-center gap-1">
+              <button 
+                onClick={() => handleRemoveItem(item._id)}
+                className="text-sm font-semibold text-neutral-4 hover:text-red-400 flex items-center gap-1"
+              >
                 <CloseLineIcon /> Remove
               </button>
             </div>
@@ -46,23 +55,23 @@ const DesktopCartTable = () => {
           <div className="w-1/2 flex justify-between">
             {/* quantity */}
             <div className="border border-neutral-4 rounded flex items-center gap-3 py-1.5 px-2">
-              <button>
+              <button onClick={() => handleUpdateQuantity(item._id, item.quantity - 1)}>
                 <MinusIcon />
               </button>
               <span className="text-xs font-semibold text-primary-black">
-                2
+                {item.quantity}
               </span>
-              <button>
+              <button onClick={() => handleUpdateQuantity(item._id, item.quantity + 1)}>
                 <PlusIcon />
               </button>
             </div>
             {/* price */}
-            <span className="text-primary-black text-lg inline-block pr-8">
-              ${item.price}
+            <span className="text-primary-black text-lg inline-block pr-4">
+              ${item.price.toFixed(2)}
             </span>
             {/* subtotal */}
             <span className="text-primary-black text-lg font-semibold inline-block">
-              ${item.price}
+              ${(item.price * item.quantity).toFixed(2)}
             </span>
           </div>
         </div>

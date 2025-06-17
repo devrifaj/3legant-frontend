@@ -13,7 +13,7 @@ const CartPage = () => {
 
       <div className="flex flex-col lg:flex-row xl:gap-16 gap-12">
         <div className="flex-1">
-          {/* table header */}
+          {/* Table Header */}
           <div className="flex pb-6 border-b border-neutral-4 text-base text-primary-black font-semibold">
             <div className="w-1/2">Product</div>
             <div className="w-1/2 justify-between sm:flex hidden">
@@ -25,12 +25,12 @@ const CartPage = () => {
 
           {/* Cart Table */}
           <div className="mb-14 sm:mb-20">
-          <div className="hidden sm:block">
-            <DesktopCartTable />
-          </div>
-          <div className="sm:hidden">
-            <MobileCartTable />
-          </div>
+            <div className="hidden sm:block">
+              <DesktopCartTable />
+            </div>
+            <div className="sm:hidden">
+              <MobileCartTable />
+            </div>
           </div>
 
           {/* Cart Coupon */}

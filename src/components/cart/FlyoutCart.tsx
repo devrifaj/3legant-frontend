@@ -1,19 +1,24 @@
 import Link from "next/link";
+import { useAppSelector, useAppDispatch } from "@/store/hooks";
 
 import Modal from "../ui/Modal";
 import MobileCartTable from "./MobileCartTable";
+import {
+  setCartOpen,
+  selectCartSubtotal,
+  selectCartTotal,
+} from "@/store/features/cart/cartSlice";
 
+const FlyoutCart = () => {
+  const dispatch = useAppDispatch();
+  const isCartOpen = useAppSelector((state) => state.cart.isCartOpen);
+  const subtotal = useAppSelector(selectCartSubtotal);
+  const total = useAppSelector(selectCartTotal);
 
-type FlyoutCartProps = {
-  isCartOpen: boolean;
-  setCartOpen: (open: boolean) => void;
-};
-
-const FlyoutCart = ({ isCartOpen, setCartOpen }: FlyoutCartProps) => {
   return (
     <Modal
       isOpen={isCartOpen}
-      onClose={() => setCartOpen(false)}
+      onClose={() => dispatch(setCartOpen(false))}
       position="right"
     >
       <div className="flex flex-col justify-between h-full">
@@ -37,25 +42,32 @@ const FlyoutCart = ({ isCartOpen, setCartOpen }: FlyoutCartProps) => {
               Subtotal
             </span>
 
-            <span className="text-black font-semibold">$99.00</span>
+            <span className="text-black font-semibold">
+              ${subtotal.toFixed(2)}
+            </span>
           </span>
 
           {/* total */}
           <span className="flex-between text-black font-medium font-poppins pt-2 mb-5 text-[20px]">
             <span>Total</span>
 
-            <span>$99.00</span>
+            <span>${total.toFixed(2)}</span>
           </span>
 
           {/* checkout link */}
-          <Link className="primary-btn inline-block mb-4" href="/checkout">
+          <Link
+            className="primary-btn inline-block mb-4"
+            href="/checkout"
+            onClick={() => dispatch(setCartOpen(false))}
+          >
             Checkout
           </Link>
 
           {/* view cart link */}
           <Link
             className="flex-center font-semibold text-sm underline hover:scale-105"
-            href="/checkout"
+            onClick={() => dispatch(setCartOpen(false))}
+            href="/cart"
           >
             View Cart
           </Link>
