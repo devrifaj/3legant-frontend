@@ -68,7 +68,7 @@ const Header = () => {
                 </span>
 
                 {cartItems.length > 0 && (
-                  <p className="absolute -top-2 -right-2 w-5 h-5 flex-center pr-0.5 bg-neutral-7 text-white text-xs font-bold rounded-full">
+                  <p className="absolute -top-2 -right-2 w-5 h-5 flex-center p-0.5 bg-neutral-7 text-white text-xs font-bold rounded-full text-center">
                     {cartItems.length}
                   </p>
                 )}

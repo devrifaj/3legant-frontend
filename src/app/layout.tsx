@@ -29,11 +29,11 @@ export const metadata: Metadata = {
     "Elegant is your one-stop shop for premium shop with confidence and discover elegance in every product. Shop with style at Elegant – your destination for premium online shopping.",
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="en">
       <body
@@ -43,4 +43,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

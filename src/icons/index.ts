@@ -10,6 +10,8 @@ export { default as VolumeIcon } from "./volume";
 export { default as VolumeMuteIcon } from "./volumeMute";
 export { default as MaximizeIcon } from "./maximize";
 export { default as Loader2Icon } from "./loader2";
+export { default as StoreIcon } from "./store";
+export { default as CallOutlineIcon } from "./callOutline";
 
 export { default as InstagramIcon } from "./instagram";
 export { default as FacebookIcon } from "./facebook";

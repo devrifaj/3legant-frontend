@@ -1,14 +1,16 @@
 import { Header } from "@/components";
 
-export default function HomeLayout({
+const HomeLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <>
       <Header />
       {children}
     </>
   );
-}
+};
+
+export default HomeLayout;

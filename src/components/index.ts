@@ -23,6 +23,10 @@ export { default as Header } from "./header/Header";
 export { default as Footer } from "./footer/Footer";
 export { default as Footer_2 } from "./footer/Footer_2";
 
+// contact us
+export { default as ContactForm } from "./contact-us/ContactForm";
+export { default as ContactMap } from "./contact-us/ContactMap";
+
 // home 1
 export { default as HeroSlider } from "./home-1/hero-slider/HeroSlider";
 export { default as Tagline } from "./home-1/Tagline";

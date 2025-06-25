@@ -103,6 +103,6 @@ export const navItems = [
   },
   {
     label: "Contact Us",
-    route: "/contact",
+    route: "/contact-us",
   },
 ];

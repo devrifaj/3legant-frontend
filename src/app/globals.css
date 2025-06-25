@@ -15,6 +15,8 @@
   --breakpoint-3xl: 1536px;
 
   --color-primary-black: #121212;
+  --color-black-600: #605F5F;
+  --color-black-300: #CBCBCB;
 
   --color-secondary-blue: #377dff;
   --color-secondary-green: #38cb89;
@@ -95,8 +97,6 @@
 }
 
 @layer base {
-  *,
-  html,
   body {
     @apply box-border p-0 m-0 font-inter;
   }
@@ -116,6 +116,10 @@
 
   h2 {
     @apply text-[40px] leading-[44px] md:leading-[var(--tw-leading,_var(--text-7xl--line-height))] md:text-5xl lg:text-7xl;
+  }
+
+  h3 {
+    @apply text-[28px] leading-[34px] md:text-[34px] lg:text-[54px] lg:leading-[58px] text-neutral-7
   }
 
   h4 {
@@ -176,7 +180,11 @@
 
   .swiper-pagination-bullet-active {
     @apply rounded pointer-events-none bg-neutral-1;
-  } 
+  }
+
+  .form-validation-error {
+    @apply text-sm text-red-400 mt-1 font-space-grotesk
+  }
 }
 
 @layer utilities {

@@ -1,10 +1,10 @@
 import { Footer, Header } from "@/components";
 
-export default function MainLayout({
+const MainLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <>
       <Header />
@@ -12,4 +12,6 @@ export default function MainLayout({
       <Footer variant="home-1" />
     </>
   );
-}
+};
+
+export default MainLayout;
