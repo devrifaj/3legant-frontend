@@ -9,11 +9,7 @@ import ProductCard from "./ProductCard";
 // Swiper styles
 import "swiper/css";
 
-const ProductCarousel = ({
-  title,
-  products,
-  variant,
-}: ProductCarouselProps) => {
+const ProductCarousel = ({ title, products, variant }: ProductCarouselProps) => {
   const swiperRef = useRef<SwiperType | null>(null);
   const [activeIndexGroup, setActiveIndexGroup] = useState(0);
 
@@ -36,9 +32,9 @@ const ProductCarousel = ({
   };
 
   return (
-    <section className="my-8 md:my-12 relative">
+    <section className="relative my-8 md:my-12">
       <div className="wrapper">
-        <div className="flex justify-between items-center mb-10 md:mb-12">
+        <div className="mb-10 flex items-center justify-between md:mb-12">
           <h4 className="section-title w-full">{title}</h4>
 
           <div className="product-swiper-pagination flex items-center justify-end gap-2">
@@ -47,9 +43,7 @@ const ProductCarousel = ({
                 key={index}
                 onClick={() => handleBulletClick(index)}
                 className={`swiper-pagination-bullet ${
-                  activeIndexGroup === index
-                    ? "swiper-pagination-bullet-active"
-                    : ""
+                  activeIndexGroup === index ? "swiper-pagination-bullet-active" : ""
                 }`}
               ></button>
             ))}
@@ -85,15 +79,14 @@ const ProductCarousel = ({
               border-color: var(--color-neutral-7);
             }
 
-            .product-swiper-pagination
-              .swiper-pagination-bullet-active::before {
+            .product-swiper-pagination .swiper-pagination-bullet-active::before {
               background-color: var(--color-neutral-7);
             }
           `}</style>
         </div>
       </div>
 
-      <div className="relative pl-[calc((100%-310px)/2)] xs:pl-[calc((100%-420px)/2)] sm:pl-[calc((100%-580px)/2)] md:pl-[calc((100%-700px)/2)] lg:pl-[calc((100%-960px)/2)] xl:pl-[calc((100%-1120px)/2)] pr-0">
+      <div className="relative pr-0 pl-[calc((100%-310px)/2)] xs:pl-[calc((100%-420px)/2)] sm:pl-[calc((100%-580px)/2)] md:pl-[calc((100%-700px)/2)] lg:pl-[calc((100%-960px)/2)] xl:pl-[calc((100%-1120px)/2)]">
         <Swiper
           onSwiper={(swiper) => {
             swiperRef.current = swiper;

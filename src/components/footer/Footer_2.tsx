@@ -7,14 +7,7 @@ import {
   InstagramIcon,
   YoutubeIcon,
 } from "@/icons";
-import {
-  AmericanExpress,
-  ApplePay,
-  MasterCard,
-  Paypal,
-  Stripe,
-  Visa,
-} from "@/icons";
+import { AmericanExpress, ApplePay, MasterCard, Paypal, Stripe, Visa } from "@/icons";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -30,22 +23,20 @@ const Footer_2 = ({ variant }: FooterProps) => {
 
   return (
     <footer className={`${home3 ? "bg-black" : "bg-neutral-3"}`}>
-      <div className="wrapper pt-14 md:pt-20 md:pb-8 pb-12">
+      <div className="wrapper pt-14 pb-12 md:pt-20 md:pb-8">
         {/* footer top part */}
-        <div className="lg:flex sm:grid flex flex-col sm:flex-row grid-cols-2 gap-8 sm:pb-16 pb-8">
+        <div className="flex grid-cols-2 flex-col gap-8 pb-8 sm:grid sm:flex-row sm:pb-16 lg:flex">
           {/* logo, address and social links */}
           <div
             className={`${
-              home3
-                ? "lg:max-w-[544px] border-neutral-4"
-                : "lg:max-w-[352px] border-neutral-4/25"
-            } w-full lg:border-0 border-b  lg:pb-0 pb-8`}
+              home3 ? "border-neutral-4 lg:max-w-[544px]" : "border-neutral-4/25 lg:max-w-[352px]"
+            } w-full border-b pb-8 lg:border-0 lg:pb-0`}
           >
             {/* logo */}
             <Link
               className={`text-2xl ${
                 home3 ? "text-white" : "text-black"
-              } font-medium font-poppins mb-8 inline-block`}
+              } mb-8 inline-block font-poppins font-medium`}
               href={`${home3 ? "/home-3" : "/home-4"}`}
             >
               3legant<span className="text-neutral-4">.</span>
@@ -55,8 +46,8 @@ const Footer_2 = ({ variant }: FooterProps) => {
             <p
               className={`${
                 home3
-                  ? "text-lg font-poppins font-medium text-neutral-1 gap-1 mb-6"
-                  : "text-sm text-neutral-7 gap-2 mb-4"
+                  ? "mb-6 gap-1 font-poppins text-lg font-medium text-neutral-1"
+                  : "mb-4 gap-2 text-sm text-neutral-7"
               } flex flex-col`}
             >
               {home3 ? (
@@ -73,18 +64,10 @@ const Footer_2 = ({ variant }: FooterProps) => {
               )}
             </p>
 
-            {home3 ? (
-              ""
-            ) : (
-              <p className="text-neutral-7 text-sm mb-8">84-756-3237</p>
-            )}
+            {home3 ? "" : <p className="mb-8 text-sm text-neutral-7">84-756-3237</p>}
 
             {/* social links */}
-            <ul
-              className={`${
-                home3 ? " text-neutral-1" : "text-neutral-7"
-              } flex gap-6`}
-            >
+            <ul className={`${home3 ? "text-neutral-1" : "text-neutral-7"} flex gap-6`}>
               <li>
                 <Link href="#">
                   <InstagramIcon />
@@ -107,33 +90,27 @@ const Footer_2 = ({ variant }: FooterProps) => {
           <div
             className={`${
               home3 ? "border-neutral-4" : "border-neutral-4/25"
-            } lg:max-w-[160px] w-full lg:border-0 border-b lg:pb-0 pb-8`}
+            } w-full border-b pb-8 lg:max-w-[160px] lg:border-0 lg:pb-0`}
           >
             <span
               className={`${
                 home3 ? "text-neutral-1" : "text-neutral-7"
-              } text-base font-medium font-poppins  flex justify-between mb-6 sm:mb-10`}
+              } mb-6 flex justify-between font-poppins text-base font-medium sm:mb-10`}
             >
               Page
               <button
                 className={`${
                   isPageDropdownOpen ? "rotate-180" : "rotate-0"
-                } sm:hidden transition-all`}
+                } transition-all sm:hidden`}
                 onClick={() => setPageDropdownOpen(!isPageDropdownOpen)}
               >
-                <DropDownIcon
-                  className={`${home3 ? "text-neutral-1" : "text-neutral-7"}`}
-                />
+                <DropDownIcon className={`${home3 ? "text-neutral-1" : "text-neutral-7"}`} />
               </button>
             </span>
 
             {/* page links */}
             {isPageDropdownOpen ? (
-              <ul
-                className={`${
-                  home3 ? "text-neutral-1" : "text-neutral-7"
-                } flex flex-col gap-6`}
-              >
+              <ul className={`${home3 ? "text-neutral-1" : "text-neutral-7"} flex flex-col gap-6`}>
                 <li>
                   <Link className="text-sm hover:underline" href="/">
                     Home
@@ -145,10 +122,7 @@ const Footer_2 = ({ variant }: FooterProps) => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="text-sm hover:underline"
-                    href="/collections/all"
-                  >
+                  <Link className="text-sm hover:underline" href="/collections/all">
                     Product
                   </Link>
                 </li>
@@ -172,33 +146,27 @@ const Footer_2 = ({ variant }: FooterProps) => {
           <div
             className={`${
               home3 ? "border-neutral-4" : "border-neutral-4/25"
-            } lg:max-w-[160px] w-full lg:border-0 border-b lg:pb-0 pb-8`}
+            } w-full border-b pb-8 lg:max-w-[160px] lg:border-0 lg:pb-0`}
           >
             <span
               className={`${
                 home3 ? "text-neutral-1" : "text-neutral-7"
-              } text-base font-medium font-poppins flex justify-between mb-6 sm:mb-10`}
+              } mb-6 flex justify-between font-poppins text-base font-medium sm:mb-10`}
             >
               Info
               <button
                 className={`${
                   isInfoDropdownOpen ? "rotate-180" : "rotate-0"
-                } sm:hidden transition-all`}
+                } transition-all sm:hidden`}
                 onClick={() => setInfoDropdownOpen(!isInfoDropdownOpen)}
               >
-                <DropDownIcon
-                  className={`${home3 ? "text-neutral-1" : "text-neutral-7"}`}
-                />
+                <DropDownIcon className={`${home3 ? "text-neutral-1" : "text-neutral-7"}`} />
               </button>
             </span>
 
             {/* info links */}
             {isInfoDropdownOpen ? (
-              <ul
-                className={`${
-                  home3 ? "text-neutral-1" : "text-neutral-7"
-                } flex flex-col gap-6`}
-              >
+              <ul className={`${home3 ? "text-neutral-1" : "text-neutral-7"} flex flex-col gap-6`}>
                 <li>
                   <Link className="text-sm hover:underline" href="#">
                     Shipping Policy
@@ -228,10 +196,8 @@ const Footer_2 = ({ variant }: FooterProps) => {
           {/* join newsletter and office */}
           <div
             className={`${
-              home3
-                ? "lg:max-w-[160px] border-neutral-4"
-                : "lg:max-w-[352px] border-neutral-4/25"
-            } w-full lg:border-0 border-b lg:pb-0 sm:pb-8 pb-16`}
+              home3 ? "border-neutral-4 lg:max-w-[160px]" : "border-neutral-4/25 lg:max-w-[352px]"
+            } w-full border-b pb-16 sm:pb-8 lg:border-0 lg:pb-0`}
           >
             {/* office */}
             {home3 ? (
@@ -239,33 +205,32 @@ const Footer_2 = ({ variant }: FooterProps) => {
                 <span
                   className={`${
                     home3 ? "text-neutral-1" : "text-neutral-7"
-                  } text-base font-medium font-poppins inline-block mb-6 sm:mb-10`}
+                  } mb-6 inline-block font-poppins text-base font-medium sm:mb-10`}
                 >
                   Office
                 </span>
 
                 <ul
                   className={`${
-                    home3 ? "text-neutral-1 gap-1" : "text-neutral-7 gap-6"
+                    home3 ? "gap-1 text-neutral-1" : "gap-6 text-neutral-7"
                   } flex flex-col`}
                 >
                   <li className="text-sm">43111 Hai Trieu street,</li>
                   <li className="text-sm">District 1, HCMC</li>
-                  <li className="text-sm mb-2">Vietnam</li>
+                  <li className="mb-2 text-sm">Vietnam</li>
                   <li className="text-sm">84-756-3237</li>
                 </ul>
               </>
             ) : (
               /* news letter */
               <>
-                <span className="text-base font-medium font-poppins text-neutral-7 inline-block mb-10">
+                <span className="mb-10 inline-block font-poppins text-base font-medium text-neutral-7">
                   Join Newsletter
                 </span>
 
                 {/* description */}
-                <p className="text-sm mb-6">
-                  Subscribe our newsletter to get more deals, new products and
-                  promotions
+                <p className="mb-6 text-sm">
+                  Subscribe our newsletter to get more deals, new products and promotions
                 </p>
 
                 {/* newsletter form */}
@@ -273,9 +238,9 @@ const Footer_2 = ({ variant }: FooterProps) => {
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="w-full rounded-4xl border-2 border-neutral-4/25 py-3 px-4 text-sm placeholder:text-neutral-4"
+                    className="w-full rounded-4xl border-2 border-neutral-4/25 px-4 py-3 text-sm placeholder:text-neutral-4"
                   />
-                  <button className="h-8 w-8 bg-secondary-blue rounded-full flex-center absolute right-2 top-2 bottom-2">
+                  <button className="flex-center absolute top-2 right-2 bottom-2 h-8 w-8 rounded-full bg-secondary-blue">
                     <ArrowRightMiniIcon />
                   </button>
                 </form>
@@ -285,34 +250,27 @@ const Footer_2 = ({ variant }: FooterProps) => {
         </div>
 
         {/* footer bottom part */}
-        <div className="lg:border-t border-neutral-4 lg:pt-4 flex flex-col-reverse lg:flex-row justify-between">
+        <div className="flex flex-col-reverse justify-between border-neutral-4 lg:flex-row lg:border-t lg:pt-4">
           {/* copyright, privacy policy, terms and conditions */}
-          <div className="flex flex-col-reverse lg:flex-row items-center gap-4">
-            <p className={`${home3 ? "" : "!text-neutral-7 "} caption-2`}>
-              Copyright © {new Date().getFullYear()} 3legant. All rights
-              reserved
+          <div className="flex flex-col-reverse items-center gap-4 lg:flex-row">
+            <p className={`${home3 ? "" : "!text-neutral-7"} caption-2`}>
+              Copyright © {new Date().getFullYear()} 3legant. All rights reserved
             </p>
 
-            <div className="w-[1px] h-5 bg-neutral-4 hidden lg:block"></div>
+            <div className="hidden h-5 w-[1px] bg-neutral-4 lg:block"></div>
 
             <ul
               className={`${
                 home3 ? "text-neutral-4" : "text-neutral-7"
-              } flex lg:gap-4 gap-8 mb-4 lg:mb-0`}
+              } mb-4 flex gap-8 lg:mb-0 lg:gap-4`}
             >
               <li>
-                <Link
-                  className="text-xs hover:underline"
-                  href="/privacy-policy"
-                >
+                <Link className="text-xs hover:underline" href="/privacy-policy">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link
-                  className="text-xs hover:underline"
-                  href="/terms-and-conditions"
-                >
+                <Link className="text-xs hover:underline" href="/terms-and-conditions">
                   Terms of Use
                 </Link>
               </li>
@@ -320,7 +278,7 @@ const Footer_2 = ({ variant }: FooterProps) => {
           </div>
 
           {/* payment partners */}
-          <ul className="flex gap-2 lg:justify-start justify-center pb-8 lg:pb-0">
+          <ul className="flex justify-center gap-2 pb-8 lg:justify-start lg:pb-0">
             <li className="payment-partner">
               <Visa />
             </li>

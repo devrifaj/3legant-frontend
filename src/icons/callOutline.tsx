@@ -1,4 +1,4 @@
-const CallOutlineIcon = ({className = ""}) => {
+const CallOutlineIcon = ({ className = "" }) => {
   return (
     <svg
       width="33"

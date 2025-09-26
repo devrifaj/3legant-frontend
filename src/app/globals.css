@@ -1,7 +1,4 @@
 @import "tailwindcss";
-@plugin "daisyui" {
-  themes: light --default;
-}
 
 @theme inline {
   --font-poppins: var(--font-poppins);
@@ -15,8 +12,8 @@
   --breakpoint-3xl: 1536px;
 
   --color-primary-black: #121212;
-  --color-black-600: #605F5F;
-  --color-black-300: #CBCBCB;
+  --color-black-600: #605f5f;
+  --color-black-300: #cbcbcb;
 
   --color-secondary-blue: #377dff;
   --color-secondary-green: #38cb89;
@@ -30,7 +27,7 @@
   --color-neutral-5: #343839;
   --color-neutral-6: #232627;
   --color-neutral-7: #141718;
-  --color-neutral-8: #FCFCFD;
+  --color-neutral-8: #fcfcfd;
 
   --shadow-favorite-btn: 0px 8px 16px -8px #0f0f0f1f;
   --shadow-add-to-cart-btn: 0px 8px 16px 0px #00000009;
@@ -98,7 +95,7 @@
 
 @layer base {
   body {
-    @apply box-border p-0 m-0 font-inter;
+    @apply m-0 box-border p-0 font-inter;
   }
 
   h1,
@@ -107,23 +104,23 @@
   h4,
   h5,
   h6 {
-    @apply font-medium font-poppins text-primary-black;
+    @apply font-poppins font-medium text-primary-black;
   }
 
   h1 {
-    @apply xl:text-[80px] lg:text-6xl sm:text-5xl text-[40px] xl:leading-[84px] lg:leading-14 leading-11 lg:-tracking-[3px] -tracking-[0.4px];
+    @apply text-[40px] leading-11 -tracking-[0.4px] sm:text-5xl lg:text-6xl lg:leading-14 lg:-tracking-[3px] xl:text-[80px] xl:leading-[84px];
   }
 
   h2 {
-    @apply text-[40px] leading-[44px] md:leading-[var(--tw-leading,_var(--text-7xl--line-height))] md:text-5xl lg:text-7xl;
+    @apply text-[40px] leading-[44px] md:text-5xl md:leading-[var(--tw-leading,_var(--text-7xl--line-height))] lg:text-7xl;
   }
 
   h3 {
-    @apply text-[28px] leading-[34px] md:text-[34px] lg:text-[54px] lg:leading-[58px] text-neutral-7
+    @apply text-[28px] leading-[34px] text-neutral-7 md:text-[34px] lg:text-[54px] lg:leading-[58px];
   }
 
   h4 {
-    @apply lg:text-[40px] text-[34px] leading-[38px] lg:leading-[44px] text-neutral-7;
+    @apply text-[34px] leading-[38px] text-neutral-7 lg:text-[40px] lg:leading-[44px];
   }
 
   h5 {
@@ -141,15 +138,15 @@
 
 @layer components {
   .wrapper {
-    @apply xl:max-w-[1120px] lg:max-w-[960px] md:max-w-[700px] sm:max-w-[580px] xs:max-w-[420px] max-w-[310px] mx-auto;
+    @apply mx-auto max-w-[310px] xs:max-w-[420px] sm:max-w-[580px] md:max-w-[700px] lg:max-w-[960px] xl:max-w-[1120px];
   }
 
   .footer-link {
-    @apply text-sm transition-colors text-neutral-1 hover:underline;
+    @apply text-sm text-neutral-1 transition-colors hover:underline;
   }
 
   .payment-partner {
-    @apply flex items-center justify-center w-12 h-8 bg-white rounded;
+    @apply flex h-8 w-12 items-center justify-center rounded bg-white;
   }
 
   .caption-1 {
@@ -157,20 +154,20 @@
   }
 
   .caption-2 {
-    @apply text-xs text-neutral-3 font-poppins;
+    @apply font-poppins text-xs text-neutral-3;
   }
 
   .section-title {
-    @apply md:text-[40px] text-[34px] leading-9 md:leading-11 font-medium text-black font-poppins;
+    @apply font-poppins text-[34px] leading-9 font-medium text-black md:text-[40px] md:leading-11;
   }
 
   /* swiper custom styles */
   .swiper-pagination {
-    @apply absolute z-20 flex items-center justify-center gap-4 -translate-x-1/2 bottom-4 md:bottom-8 left-1/2;
+    @apply absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 items-center justify-center gap-4 md:bottom-8;
   }
 
   .swiper-pagination-bullet {
-    @apply inline-block transition-all duration-300 rounded-full opacity-100 cursor-pointer bg-neutral-1;
+    @apply inline-block cursor-pointer rounded-full bg-neutral-1 opacity-100 transition-all duration-300;
     margin: 0 !important;
   }
 
@@ -179,11 +176,11 @@
   }
 
   .swiper-pagination-bullet-active {
-    @apply rounded pointer-events-none bg-neutral-1;
+    @apply pointer-events-none rounded bg-neutral-1;
   }
 
   .form-validation-error {
-    @apply text-sm text-red-400 mt-1 font-space-grotesk
+    @apply mt-1 font-space-grotesk text-sm text-red-400;
   }
 }
 
@@ -201,11 +198,16 @@
   }
 
   .custom-orange-gradient {
-    background: linear-gradient(0deg, #fec75a, #fec75a),
+    background:
+      linear-gradient(0deg, #fec75a, #fec75a),
       linear-gradient(180.02deg, #ffc95c 17.32%, rgba(255, 201, 92, 0) 29.19%);
   }
 
   .primary-btn {
-    @apply bg-neutral-7 text-white font-medium text-lg px-4 py-2.5 rounded-md w-full text-center hover:bg-gray-800 transition-colors;
+    @apply rounded-md bg-neutral-7 px-4 py-2.5 text-center text-base font-medium text-white transition-colors hover:bg-gray-800 disabled:cursor-not-allowed disabled:bg-neutral-7 disabled:opacity-80;
+  }
+
+  .input-secondary {
+    @apply w-full rounded-md border border-black-300 px-4 py-[7px] text-[#6C7275];
   }
 }

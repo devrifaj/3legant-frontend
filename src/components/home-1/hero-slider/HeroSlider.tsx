@@ -2,14 +2,7 @@
 import { useCallback, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
-import {
-  A11y,
-  Autoplay,
-  EffectFade,
-  Keyboard,
-  Navigation,
-  Pagination,
-} from "swiper/modules";
+import { A11y, Autoplay, EffectFade, Keyboard, Navigation, Pagination } from "swiper/modules";
 import SliderItem from "./SliderItem";
 import { slides } from "@/constants";
 import SliderControl from "./SliderControl";
@@ -53,19 +46,12 @@ const HeroSlider = () => {
 
   return (
     <section className="wrapper">
-      <div className="relative group w-full">
+      <div className="group relative w-full">
         <Swiper
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
-          modules={[
-            Autoplay,
-            EffectFade,
-            Navigation,
-            Pagination,
-            Keyboard,
-            A11y,
-          ]}
+          modules={[Autoplay, EffectFade, Navigation, Pagination, Keyboard, A11y]}
           effect="fade"
           slidesPerView={1}
           spaceBetween={0}
@@ -83,7 +69,7 @@ const HeroSlider = () => {
               return `<span class="${className} w-2.5 h-2.5"></span>`;
             },
           }}
-          className="w-full h-[305px] xs:h-[350px] sm:h-[400px] md:h-[450px] lg:h-[535px] overflow-hidden"
+          className="h-[305px] w-full overflow-hidden xs:h-[350px] sm:h-[400px] md:h-[450px] lg:h-[535px]"
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>

@@ -11,12 +11,7 @@ type ModalProps = {
   children: React.ReactNode;
 };
 
-const Modal = ({
-  isOpen,
-  onClose,
-  position = "left",
-  children,
-}: ModalProps) => {
+const Modal = ({ isOpen, onClose, position = "left", children }: ModalProps) => {
   useEffect(() => {
     if (!isOpen) return;
 
@@ -61,12 +56,12 @@ const Modal = ({
         ) : null}
 
         {/* Modal Content */}
-        <div className="p-6 h-full">
+        <div className="h-full p-6">
           {/* if position in top then close button */}
           {position === "top" && (
             <button
               onClick={onClose}
-              className="absolute top-0 bottom-0 right-1/12 sm:right-1/6 lg:right-1/4 text-gray-500 hover:text-gray-700 text-xl"
+              className="absolute top-0 right-1/12 bottom-0 text-xl text-gray-500 hover:text-gray-700 sm:right-1/6 lg:right-1/4"
             >
               <CancelIcon className="text-neutral-4" />
             </button>

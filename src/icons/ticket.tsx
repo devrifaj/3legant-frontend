@@ -1,4 +1,4 @@
-const TicketIcon = ({className = ""}) => {
+const TicketIcon = ({ className = "" }) => {
   return (
     <svg
       width="24"

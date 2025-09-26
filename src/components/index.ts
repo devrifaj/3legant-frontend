@@ -1,6 +1,9 @@
 // ui
 export { default as Modal } from "./ui/Modal";
 export { default as StarRating } from "./ui/StarRating";
+export { default as Input } from "./ui/Input";
+export { default as Button } from "./ui/Button";
+export { default as FormErrorMessage } from "./ui/FormErrorMessage";
 
 // shared
 export { default as BannerGrid } from "./shared/BannerGrid";

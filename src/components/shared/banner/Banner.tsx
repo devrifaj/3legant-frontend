@@ -9,37 +9,33 @@ const Banner = ({ bannerData }: BannerProps) => {
 
   return (
     <section
-      className={`flex md:flex-row ${
-        isHome4 ? "flex-col" : "flex-col-reverse"
-      } lg:h-[530px]`}
+      className={`flex md:flex-row ${isHome4 ? "flex-col" : "flex-col-reverse"} lg:h-[530px]`}
     >
       {/* Banner Image */}
-      <div className="lg:w-1/2 w-full h-[365px] lg:h-auto">
+      <div className="h-[365px] w-full lg:h-auto lg:w-1/2">
         <Image
           src={bannerData.bannerImg}
           alt="banner"
           width={1000}
           height={1000}
-          className="object-cover w-full h-full"
+          className="h-full w-full object-cover"
         />
       </div>
 
       {/* Banner Content */}
       <div
-        className={`${bannerData.bannerStyles.bgColor} lg:w-1/2 w-full h-[365px] lg:h-auto pl-0 lg:pl-[50px] xl:pl-[72px] flex items-center`}
+        className={`${bannerData.bannerStyles.bgColor} flex h-[365px] w-full items-center pl-0 lg:h-auto lg:w-1/2 lg:pl-[50px] xl:pl-[72px]`}
       >
-        <div className="md:max-w-[700px] sm:max-w-[580px] xs:max-w-[420px] max-w-[310px] lg:mx-0 mx-auto lg:max-w-full">
+        <div className="mx-auto max-w-[310px] xs:max-w-[420px] sm:max-w-[580px] md:max-w-[700px] lg:mx-0 lg:max-w-full">
           <span
-            className={`${bannerData.bannerStyles.subtitle} text-base font-bold mb-4 inline-block`}
+            className={`${bannerData.bannerStyles.subtitle} mb-4 inline-block text-base font-bold`}
           >
             {bannerData.bannerContent.subtitle}
           </span>
           <h4 className={`${bannerData.bannerStyles.title} mb-4`}>
             {bannerData.bannerContent.title}
           </h4>
-          <p
-            className={`${bannerData.bannerStyles.description} text-sm lg:text-xl`}
-          >
+          <p className={`${bannerData.bannerStyles.description} text-sm lg:text-xl`}>
             {bannerData.bannerContent.description}
           </p>
           {/* Countdown Banner */}
@@ -55,14 +51,14 @@ const Banner = ({ bannerData }: BannerProps) => {
             href={bannerData.bannerContent.buttonLink}
             className={`${bannerData.bannerStyles.button} ${
               isHome4
-                ? "inline-flex gap-1 items-center group border-b border-neutral-7 mt-6"
-                : "py-2.5 px-10 rounded-lg"
+                ? "group mt-6 inline-flex items-center gap-1 border-b border-neutral-7"
+                : "rounded-lg px-10 py-2.5"
             } text-base font-medium`}
           >
             {bannerData.bannerContent.buttonText}
             {isHome4 && (
-              <span className="group-hover:translate-x-1 transition-transform">
-                <ArrowRightIcon className="lg:w-5 lg:h-5 h-4 w-4" />
+              <span className="transition-transform group-hover:translate-x-1">
+                <ArrowRightIcon className="h-4 w-4 lg:h-5 lg:w-5" />
               </span>
             )}
           </Link>

@@ -7,12 +7,12 @@ const position: [number, number] = [10.772774, 106.705254];
 
 const ContactMap = () => {
   return (
-    <div className="relative md:w-1/2 md:h-[410px] lg:h-[440px] h-[310px]">
+    <div className="relative h-[310px] md:h-[410px] md:w-1/2 lg:h-[440px]">
       <MapContainer
         center={position}
         zoom={17}
         scrollWheelZoom={false}
-        className="h-full w-full z-0"
+        className="z-0 h-full w-full"
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

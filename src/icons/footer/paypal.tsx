@@ -1,12 +1,6 @@
 const Paypal = () => {
   return (
-    <svg
-      width="38"
-      height="10"
-      viewBox="0 0 38 10"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="38" height="10" viewBox="0 0 38 10" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fillRule="evenodd"
         clipRule="evenodd"

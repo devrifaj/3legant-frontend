@@ -9,28 +9,26 @@ const Footer = ({ variant }: FooterProps) => {
   const home2 = variant === "home-2";
 
   return (
-    <footer className="md:bg-neutral-7 bg-neutral-6">
-      <div className="wrapper pt-14 md:pt-20 md:pb-8 pb-12">
+    <footer className="bg-neutral-6 md:bg-neutral-7">
+      <div className="wrapper pt-14 pb-12 md:pt-20 md:pb-8">
         {/* footer top part */}
-        <div className="flex flex-col md:flex-row justify-between md:items-start items-center mb-10 md:mb-12">
-          <div className="flex flex-col xs:flex-row items-center lg:gap-8 gap-4 md:mb-0 mb-10">
+        <div className="mb-10 flex flex-col items-center justify-between md:mb-12 md:flex-row md:items-start">
+          <div className="mb-10 flex flex-col items-center gap-4 xs:flex-row md:mb-0 lg:gap-8">
             {/* logo */}
             <Link
-              className="text-base md:text-lg lg:text-2xl text-white font-medium font-poppins inline-block"
+              className="inline-block font-poppins text-base font-medium text-white md:text-lg lg:text-2xl"
               href={`${home2 ? "/home-2" : "/"}`}
             >
               3legant<span className="text-neutral-4">.</span>
             </Link>
 
-            <div className="bg-neutral-4 xs:w-[1px] xs:h-6 w-6 h-[1px]"></div>
+            <div className="h-[1px] w-6 bg-neutral-4 xs:h-6 xs:w-[1px]"></div>
 
-            <p className="caption-1">
-              {home2 ? "Headphone Store" : "Gift & Decoration Store"}
-            </p>
+            <p className="caption-1">{home2 ? "Headphone Store" : "Gift & Decoration Store"}</p>
           </div>
 
           {/* footer links */}
-          <ul className="flex flex-col xs:flex-row xs:items-start items-center lg:gap-10 xs:gap-5 gap-6">
+          <ul className="flex flex-col items-center gap-6 xs:flex-row xs:items-start xs:gap-5 lg:gap-10">
             <li>
               <Link className="footer-link" href="/">
                 Home
@@ -60,18 +58,17 @@ const Footer = ({ variant }: FooterProps) => {
         </div>
 
         {/* footer bottom part */}
-        <div className="border-t border-neutral-4 md:pt-4 pt-6 flex flex-col-reverse md:flex-row justify-between">
+        <div className="flex flex-col-reverse justify-between border-t border-neutral-4 pt-6 md:flex-row md:pt-4">
           {/* copyright, privacy policy, terms and conditions */}
-          <div className="flex flex-col-reverse md:flex-row items-center gap-7">
+          <div className="flex flex-col-reverse items-center gap-7 md:flex-row">
             <p className="caption-2">
-              Copyright © {new Date().getFullYear()} 3legant. All rights
-              reserved
+              Copyright © {new Date().getFullYear()} 3legant. All rights reserved
             </p>
 
-            <ul className="flex lg:gap-7 gap-4">
+            <ul className="flex gap-4 lg:gap-7">
               <li>
                 <Link
-                  className="text-xs font-semibold font-poppins text-neutral-1 hover:underline"
+                  className="font-poppins text-xs font-semibold text-neutral-1 hover:underline"
                   href="/privacy-policy"
                 >
                   Privacy Policy
@@ -79,7 +76,7 @@ const Footer = ({ variant }: FooterProps) => {
               </li>
               <li>
                 <Link
-                  className="text-xs font-semibold font-poppins text-neutral-1 hover:underline"
+                  className="font-poppins text-xs font-semibold text-neutral-1 hover:underline"
                   href="/terms-and-conditions"
                 >
                   Terms of Use
@@ -89,7 +86,7 @@ const Footer = ({ variant }: FooterProps) => {
           </div>
 
           {/* social media links */}
-          <ul className="flex gap-6 md:justify-start justify-center text-neutral-1 pb-8 md:pb-0">
+          <ul className="flex justify-center gap-6 pb-8 text-neutral-1 md:justify-start md:pb-0">
             <li>
               <Link href="#">
                 <InstagramIcon />

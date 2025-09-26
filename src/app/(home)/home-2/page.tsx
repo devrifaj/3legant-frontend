@@ -28,7 +28,7 @@ const HomePage2 = () => {
         <ProductCarousel title="New Arrivals" products={home2NewArrivalData} />
         <BannerGrid data={home2BannerGridData} />
         <BestSeller products={home2BestSellerData} />
-        <Banner bannerData={{...home2BannerData, variant: "home2"}} />
+        <Banner bannerData={{ ...home2BannerData, variant: "home2" }} />
         <WhyChooseUs variant="home-2" />
         <InstagramNewsFeed images={home2InstagramNewsFeedData} />
         <NewsLetter variant="home2" />

@@ -13,26 +13,24 @@ const WhyChooseUs = ({ variant }: WhyChooseUsProps) => {
   return (
     <section className={`${contactUs ? "bg-neutral-2" : ""}`}>
       <div
-        className={`wrapper ${home1 ? "md:my-12 my-8" : ""} ${
-          home2 ? "md:my-10 my-8" : ""
+        className={`wrapper ${home1 ? "my-8 md:my-12" : ""} ${
+          home2 ? "my-8 md:my-10" : ""
         } ${home4 ? "my-8 md:my-4" : ""} ${contactUs ? "py-8 md:py-4" : ""}`}
       >
-        <div className="grid grid-cols-2 lg:grid-cols-4 lg:gap-6 gap-x-2 gap-y-6">
+        <div className="grid grid-cols-2 gap-x-2 gap-y-6 lg:grid-cols-4 lg:gap-6">
           {whyChooseUsData.map(({ id, icon: Icon, title, description }) => (
             <div
               key={id}
-              className={`flex flex-col items-start gap-4 px-4 md:px-8 lg:px-6 xl:px-8 py-8 md:py-12 lg:py-8 xl:py-12 ${
+              className={`flex flex-col items-start gap-4 px-4 py-8 md:px-8 md:py-12 lg:px-6 lg:py-8 xl:px-8 xl:py-12 ${
                 home4 || contactUs ? "" : "bg-neutral-2"
               }`}
             >
               <Icon />
               <div>
-                <span className="text-sm md:text-xl font-semibold md:font-medium font-inter md:font-poppins text-neutral-7 inline-block md:mb-0 mb-1">
+                <span className="mb-1 inline-block font-inter text-sm font-semibold text-neutral-7 md:mb-0 md:font-poppins md:text-xl md:font-medium">
                   {title}
                 </span>
-                <p className="text-sm text-neutral-4 font-inter md:font-poppins">
-                  {description}
-                </p>
+                <p className="font-inter text-sm text-neutral-4 md:font-poppins">{description}</p>
               </div>
             </div>
           ))}

@@ -1,4 +1,4 @@
-const FacebookIcon = ({className = ""}) => {
+const FacebookIcon = ({ className = "" }) => {
   return (
     <svg
       width="24"

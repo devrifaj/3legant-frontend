@@ -32,32 +32,28 @@ const BrandLogoSlider = ({ variant, data }: BrandLogoSliderProps) => {
   if (!hasMounted)
     return (
       <div className="wrapper pt-6 pb-12 md:py-10">
-        {isHome4 && (
-          <div className="skeleton w-[160px] h-7 mb-4 flex justify-center mx-auto"></div>
-        )}
-        <div className="flex md:gap-6 gap-4">
-          <div className="skeleton h-10 md:h-16 w-[167px]"></div>
-          <div className="skeleton h-10 md:h-16 w-[167px]"></div>
-          <div className="skeleton h-10 md:h-16 w-[167px]"></div>
-          <div className="skeleton sm:block hidden h-10 md:h-16 w-[167px]"></div>
-          <div className="skeleton md:block hidden h-16 w-[167px]"></div>
-          <div className="skeleton h-16 lg:block hidden w-[83px] xl:w-[167px]"></div>
+        {isHome4 && <div className="skeleton mx-auto mb-4 flex h-7 w-[160px] justify-center"></div>}
+        <div className="flex gap-4 md:gap-6">
+          <div className="skeleton h-10 w-[167px] md:h-16"></div>
+          <div className="skeleton h-10 w-[167px] md:h-16"></div>
+          <div className="skeleton h-10 w-[167px] md:h-16"></div>
+          <div className="skeleton hidden h-10 w-[167px] sm:block md:h-16"></div>
+          <div className="skeleton hidden h-16 w-[167px] md:block"></div>
+          <div className="skeleton hidden h-16 w-[83px] lg:block xl:w-[167px]"></div>
         </div>
       </div>
     );
 
   return (
     <section
-      className={`relative group w-full pt-6 ${
-        isHome4 ? "pb-12 md:pb-0" : "pb-12 md:py-10"
-      }`}
+      className={`group relative w-full pt-6 ${isHome4 ? "pb-12 md:pb-0" : "pb-12 md:py-10"}`}
     >
       {isHome4 && (
-        <span className="text-neutral-4 md:text-neutral-7 text-xl font-semibold flex-center mb-4">
+        <span className="flex-center mb-4 text-xl font-semibold text-neutral-4 md:text-neutral-7">
           Trending Brands
         </span>
       )}
-      <div className="pl-[calc((100%-310px)/2)] xs:pl-[calc((100%-420px)/2)] sm:pl-[calc((100%-580px)/2)] md:max-w-[700px] lg:max-w-[960px] xl:max-w-[1120px] 2xl:max-w-[1280px] md:mx-auto md:pl-0 pr-0">
+      <div className="pr-0 pl-[calc((100%-310px)/2)] xs:pl-[calc((100%-420px)/2)] 2xl:max-w-[1280px] sm:pl-[calc((100%-580px)/2)] md:mx-auto md:max-w-[700px] md:pl-0 lg:max-w-[960px] xl:max-w-[1120px]">
         <Swiper
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
@@ -95,12 +91,12 @@ const BrandLogoSlider = ({ variant, data }: BrandLogoSliderProps) => {
         >
           {data.map((brand) => (
             <SwiperSlide key={brand._id}>
-              <div className="w-full h-10 md:h-16">
+              <div className="h-10 w-full md:h-16">
                 <Image
                   src={brand.imgUrl}
                   width={500}
                   height={100}
-                  className="object-contain w-full h-full opacity-40"
+                  className="h-full w-full object-contain opacity-40"
                   alt={brand.name}
                 />
               </div>
@@ -110,8 +106,8 @@ const BrandLogoSlider = ({ variant, data }: BrandLogoSliderProps) => {
       </div>
 
       {/* custom controls */}
-      <div className="absolute z-10 w-full md:hidden block bottom-0">
-        <div className="flex items-center justify-center mx-auto gap-5">
+      <div className="absolute bottom-0 z-10 block w-full md:hidden">
+        <div className="mx-auto flex items-center justify-center gap-5">
           {/* previous button */}
           <button
             type="button"
@@ -119,7 +115,7 @@ const BrandLogoSlider = ({ variant, data }: BrandLogoSliderProps) => {
             className="group/slide"
             aria-label="Previous slide"
           >
-            <ArrowLeft2Icon className="w-6 h-6 text-neutral-4 group-hover/slide:text-neutral-7 active:text-neutral-7" />
+            <ArrowLeft2Icon className="h-6 w-6 text-neutral-4 group-hover/slide:text-neutral-7 active:text-neutral-7" />
           </button>
 
           {/* next button */}
@@ -129,7 +125,7 @@ const BrandLogoSlider = ({ variant, data }: BrandLogoSliderProps) => {
             className="group/slide"
             aria-label="Next slide"
           >
-            <ArrowRight2Icon className="w-6 h-6 text-neutral-4 group-hover/slide:text-neutral-7 active:text-neutral-7" />
+            <ArrowRight2Icon className="h-6 w-6 text-neutral-4 group-hover/slide:text-neutral-7 active:text-neutral-7" />
           </button>
         </div>
       </div>

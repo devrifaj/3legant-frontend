@@ -13,8 +13,7 @@ export const home4BestSellerData = [
   {
     _id: "1",
     name: "Freestyle Crew Racer leather jacket",
-    description:
-      "A stylish and comfortable loveseat sofa, perfect for modern living rooms.",
+    description: "A stylish and comfortable loveseat sofa, perfect for modern living rooms.",
     price: 595.0,
     originalPrice: 1000.0,
     imageUrl: home4JustInImg4.src,
@@ -25,8 +24,7 @@ export const home4BestSellerData = [
   {
     _id: "2",
     name: "1996 Retro Nuptse Jacket in Black",
-    description:
-      "A minimalist beige table lamp, ideal for bedside or desk lighting.",
+    description: "A minimalist beige table lamp, ideal for bedside or desk lighting.",
     price: 149.99,
     imageUrl: home4JustInImg3.src,
     rating: 4,
@@ -47,8 +45,7 @@ export const home4BestSellerData = [
   {
     _id: "4",
     name: "96 Nuptse Dip Dye bomber Jacket",
-    description:
-      "A natural bamboo basket, great for stylish and eco-friendly storage.",
+    description: "A natural bamboo basket, great for stylish and eco-friendly storage.",
     price: 400.99,
     imageUrl: home4BestSellerImg1.src,
     isNewItem: true,
@@ -59,8 +56,7 @@ export const home4BestSellerData = [
   {
     _id: "5",
     name: "Oversized real leather harrington jacket in black",
-    description:
-      "A modern toaster with a premium finish, perfect for quick breakfasts.",
+    description: "A modern toaster with a premium finish, perfect for quick breakfasts.",
     price: 249.99,
     imageUrl: home4BestSellerImg2.src,
     rating: 5,
@@ -70,8 +66,7 @@ export const home4BestSellerData = [
   {
     _id: "6",
     name: "96 Nuptse Dip Dye Korea Puffers Jacket",
-    description:
-      "A stylish and comfortable loveseat sofa, perfect for modern living rooms.",
+    description: "A stylish and comfortable loveseat sofa, perfect for modern living rooms.",
     price: 400.0,
     imageUrl: home4JustInImg1.src,
     rating: 5,
@@ -81,8 +76,7 @@ export const home4BestSellerData = [
   {
     _id: "7",
     name: "Paradigm Chilliwack coat Black Label",
-    description:
-      "A sleek table lamp that adds a warm and cozy ambiance to any space.",
+    description: "A sleek table lamp that adds a warm and cozy ambiance to any space.",
     price: 1495.0,
     imageUrl: home4BestSellerImg3.src,
     rating: 2.5,
@@ -93,8 +87,7 @@ export const home4BestSellerData = [
   {
     _id: "8",
     name: "Men's Torrentshell 3L Rain Jacket in Brown",
-    description:
-      "A minimalist beige table lamp, ideal for bedside or desk lighting.",
+    description: "A minimalist beige table lamp, ideal for bedside or desk lighting.",
     price: 149.99,
     originalPrice: 199.99,
     imageUrl: home4BestSellerImg4.src,

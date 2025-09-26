@@ -1,11 +1,11 @@
-import { CheckoutSteps } from '@/components'
+import { CheckoutSteps } from "@/components";
 
 const OrderCompletePage = () => {
   return (
     <div>
-        <CheckoutSteps />
+      <CheckoutSteps />
     </div>
-  )
-}
+  );
+};
 
-export default OrderCompletePage
+export default OrderCompletePage;

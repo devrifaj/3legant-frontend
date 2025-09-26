@@ -6,8 +6,7 @@ export const home3BannerGridData = [
     linkText: "Collections",
     linkUrl: "/",
     imageUrl: home3BannerImg1.src,
-    imageClassName:
-      "left-0 right-0 top-0 lg:top-8 lg:w-[500px] xs:w-[300px] w-[500px] mx-auto",
+    imageClassName: "left-0 right-0 top-0 lg:top-8 lg:w-[500px] xs:w-[300px] w-[500px] mx-auto",
   },
   {
     title: "Men’s Set",

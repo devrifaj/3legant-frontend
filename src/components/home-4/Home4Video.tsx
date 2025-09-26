@@ -86,16 +86,12 @@ const Home4Video = () => {
     <section className="py-6 lg:py-10">
       <div className="wrapper">
         {/* section content */}
-        <div className="flex flex-col items-center justify-center gap-4 mb-8 lg:mb-10">
+        <div className="mb-8 flex flex-col items-center justify-center gap-4 lg:mb-10">
           {/* promotion tag */}
-          <span className="text-base font-bold text-secondary-blue">
-            PROMOTION
-          </span>
+          <span className="text-base font-bold text-secondary-blue">PROMOTION</span>
           {/* section title */}
-          <h4 className="section-title text-center tracking-tighter">
-            Winter Collections
-          </h4>
-          <p className="text-base lg:text-xl text-primary-black">
+          <h4 className="section-title text-center tracking-tighter">Winter Collections</h4>
+          <p className="text-base text-primary-black lg:text-xl">
             Introducing the new winter jackets.
           </p>
         </div>
@@ -105,7 +101,7 @@ const Home4Video = () => {
           {/* Video Container */}
           <div className="relative h-full">
             <div
-              className="relative group cursor-pointer rounded-2xl overflow-hidden bg-[#0000003D] h-full"
+              className="group relative h-full cursor-pointer overflow-hidden rounded-2xl bg-[#0000003D]"
               onMouseEnter={() => hasStarted && setShowControls(true)}
               onMouseLeave={() => setShowControls(false)}
               onClick={togglePlay}
@@ -113,7 +109,7 @@ const Home4Video = () => {
               {/* Video Element */}
               <video
                 ref={videoRef}
-                className="w-full h-full aspect-video object-cover"
+                className="aspect-video h-full w-full object-cover"
                 poster={home4VideoThumbImg.src}
                 muted={isMuted}
                 playsInline
@@ -126,9 +122,9 @@ const Home4Video = () => {
 
               {/* Play Button Overlay */}
               {(!hasStarted || !isPlaying) && (
-                <div className="absolute inset-0 flex-center bg-black/24">
+                <div className="flex-center absolute inset-0 bg-black/24">
                   <button
-                    className="w-16 lg:w-20 h-16 lg:h-20 rounded-full bg-neutral-8 text-neutral-6 shadow-[0px_8px_16px_-8px_#0F0F0F33] transition-all duration-300 transform hover:scale-110 flex-center"
+                    className="flex-center h-16 w-16 transform rounded-full bg-neutral-8 text-neutral-6 shadow-[0px_8px_16px_-8px_#0F0F0F33] transition-all duration-300 hover:scale-110 lg:h-20 lg:w-20"
                     onClick={(e) => {
                       e.stopPropagation();
                       togglePlay();
@@ -136,13 +132,7 @@ const Home4Video = () => {
                     disabled={isLoading}
                     aria-label={isPlaying ? "Pause video" : "Play video"}
                   >
-                    {isLoading ? (
-                      <Loader2Icon />
-                    ) : isPlaying ? (
-                      <PauseIcon />
-                    ) : (
-                      <PlayFilledIcon />
-                    )}
+                    {isLoading ? <Loader2Icon /> : isPlaying ? <PauseIcon /> : <PlayFilledIcon />}
                   </button>
                 </div>
               )}
@@ -150,7 +140,7 @@ const Home4Video = () => {
               {/* Video Controls */}
               {hasStarted && (
                 <div
-                  className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 transition-opacity duration-300 ${
+                  className={`absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent p-6 transition-opacity duration-300 ${
                     showControls || !isPlaying ? "opacity-100" : "opacity-0"
                   }`}
                 >

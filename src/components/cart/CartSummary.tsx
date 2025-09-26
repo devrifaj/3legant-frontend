@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { useAppDispatch, useAppSelector } from "@/hooks";
 import {
   setShippingOption,
   selectCartSubtotal,
@@ -8,13 +8,11 @@ import {
   selectShippingCost,
   selectFormattedShippingOptions,
   selectPickupDiscount,
-} from "@/store/features/cart/cartSlice";
+} from "@/redux/features/cart/cartSlice";
 
 export default function CartSummary() {
   const dispatch = useAppDispatch();
-  const selectedShippingId = useAppSelector(
-    (state) => state.cart.selectedShipping
-  );
+  const selectedShippingId = useAppSelector((state) => state.cart.selectedShipping);
   const shippingCost = useAppSelector(selectShippingCost);
   const shippingOptions = useAppSelector(selectFormattedShippingOptions);
   const pickupDiscount = useAppSelector(selectPickupDiscount);
@@ -22,19 +20,19 @@ export default function CartSummary() {
   const total = useAppSelector(selectCartTotal);
 
   return (
-    <div className="w-full xl:max-w-[415px] lg:max-w-[400px] mx-auto p-4 xs:p-6 rounded-md border border-neutral-4 h-full">
-      <span className="text-base xs:text-xl font-medium font-poppins mb-4 text-neutral-7 inline-block">
+    <div className="mx-auto h-full w-full rounded-md border border-neutral-4 p-4 xs:p-6 lg:max-w-[400px] xl:max-w-[415px]">
+      <span className="mb-4 inline-block font-poppins text-base font-medium text-neutral-7 xs:text-xl">
         Cart summary
       </span>
 
-      <fieldset className="space-y-3 mb-4">
+      <fieldset className="mb-4 space-y-3">
         <legend className="sr-only">Shipping options</legend>
         {shippingOptions.map((option) => (
           <label
             key={option.id}
-            className={`flex justify-between items-center py-3 px-4 border rounded cursor-pointer transition text-base text-neutral-7 ${
+            className={`flex cursor-pointer items-center justify-between rounded border px-4 py-3 text-base text-neutral-7 transition ${
               selectedShippingId === option.id
-                ? "bg-neutral-2 border-neutral-7"
+                ? "border-neutral-7 bg-neutral-2"
                 : "hover:border-gray-400"
             }`}
           >
@@ -45,37 +43,35 @@ export default function CartSummary() {
                 value={option.id}
                 checked={selectedShippingId === option.id}
                 onChange={() => dispatch(setShippingOption(option.id))}
-                className="accent-primary-black w-[18px] h-[18px]"
+                className="h-[18px] w-[18px] accent-primary-black"
                 aria-label={option.label}
               />
-              <span className="xs:text-base text-sm">{option.label}</span>
+              <span className="text-sm xs:text-base">{option.label}</span>
             </div>
-            <span className="xs:text-base text-sm">{option.displayCost}</span>
+            <span className="text-sm xs:text-base">{option.displayCost}</span>
           </label>
         ))}
       </fieldset>
 
       <div className="mb-6 xs:mb-8">
         {/* Subtotal */}
-        <div className="flex justify-between text-sm xs:text-base text-neutral-7 font-semibold py-3 border-b border-[#EAEAEA]">
+        <div className="flex justify-between border-b border-[#EAEAEA] py-3 text-sm font-semibold text-neutral-7 xs:text-base">
           <span>Subtotal</span>
           <span className="font-semibold">${subtotal.toFixed(2)}</span>
         </div>
 
         {/* Shipping or Pickup Discount */}
-        <div className="flex justify-between text-sm xs:text-base text-neutral-7 font-semibold py-3 border-b border-[#EAEAEA]">
+        <div className="flex justify-between border-b border-[#EAEAEA] py-3 text-sm font-semibold text-neutral-7 xs:text-base">
           <span>Shipping</span>
           {selectedShippingId === "pickup" ? (
-            <span className="text-green-700">
-              - ${pickupDiscount.toFixed(2)}
-            </span>
+            <span className="text-green-700">- ${pickupDiscount.toFixed(2)}</span>
           ) : (
             <span>${shippingCost.toFixed(2)}</span>
           )}
         </div>
 
         {/* Total */}
-        <div className="flex justify-between text-base xs:text-xl font-semibold py-3">
+        <div className="flex justify-between py-3 text-base font-semibold xs:text-xl">
           <span>Total</span>
           <span>${total.toFixed(2)}</span>
         </div>

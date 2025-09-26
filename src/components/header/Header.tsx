@@ -7,13 +7,14 @@ import DeskSearch from "./DeskSearch";
 import MobNav from "./MobNav";
 import FlyoutCart from "../cart/FlyoutCart";
 import NotificationOffer from "./NotificationOffer";
-import { useAppSelector } from "@/store/hooks";
+import { useAppSelector } from "@/hooks";
 
 const Header = () => {
   const [isSearchOpen, setSearchOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
-  
+
   const cartItems = useAppSelector((state) => state.cart.cartItems);
+  const { user } = useAppSelector((state) => state.user);
 
   return (
     <>
@@ -21,22 +22,19 @@ const Header = () => {
       <NotificationOffer />
 
       {/* header */}
-      <header className="py-1.5 z-30">
+      <header className="z-30 py-1.5">
         <div className="wrapper">
           <nav className="flex-between">
             {/* header left */}
             <div className="flex items-center gap-2">
               {/* hamburger menu for mobile */}
-              <button
-                onClick={() => setMenuOpen(true)}
-                className="block md:hidden"
-              >
-                <MenuIcon className="w-10 h-10" />
+              <button onClick={() => setMenuOpen(true)} className="block md:hidden">
+                <MenuIcon className="h-10 w-10" />
               </button>
 
               {/* logo */}
               <Link
-                className="text-base font-medium text-black md:text-lg lg:text-2xl font-poppins"
+                className="font-poppins text-base font-medium text-black md:text-lg lg:text-2xl"
                 href="/"
               >
                 3legant<span className="text-neutral-4">.</span>
@@ -57,18 +55,20 @@ const Header = () => {
               </button>
 
               {/* user icon */}
-              <button className="hover:scale-105">
-                <UserIcon />
-              </button>
+              {user && (
+                <button className="hover:scale-105">
+                  <UserIcon />
+                </button>
+              )}
 
               {/* cart link */}
               <Link className="relative inline-block" href="/cart">
-                <span className="hover:scale-105 inline-flex items-center h-full">
+                <span className="inline-flex h-full items-center hover:scale-105">
                   <ShoppingBagIcon />
                 </span>
 
                 {cartItems.length > 0 && (
-                  <p className="absolute -top-2 -right-2 w-5 h-5 flex-center p-0.5 bg-neutral-7 text-white text-xs font-bold rounded-full text-center">
+                  <p className="flex-center absolute -top-2 -right-2 h-5 w-5 rounded-full bg-neutral-7 p-0.5 text-center text-xs font-bold text-white">
                     {cartItems.length}
                   </p>
                 )}

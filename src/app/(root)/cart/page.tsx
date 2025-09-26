@@ -11,12 +11,12 @@ const CartPage = () => {
     <section className="wrapper pb-20">
       <CheckoutSteps />
 
-      <div className="flex flex-col lg:flex-row xl:gap-16 gap-12">
+      <div className="flex flex-col gap-12 lg:flex-row xl:gap-16">
         <div className="flex-1">
           {/* Table Header */}
-          <div className="flex pb-6 border-b border-neutral-4 text-base text-primary-black font-semibold">
+          <div className="flex border-b border-neutral-4 pb-6 text-base font-semibold text-primary-black">
             <div className="w-1/2">Product</div>
-            <div className="w-1/2 justify-between sm:flex hidden">
+            <div className="hidden w-1/2 justify-between sm:flex">
               <div>Quantity</div>
               <div>Price</div>
               <div>Subtotal</div>

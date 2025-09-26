@@ -8,7 +8,7 @@ const Home4BannerGrid = () => {
   return (
     <section className="py-10 md:py-12">
       <div className="wrapper">
-        <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+        <div className="grid gap-4 md:grid-cols-2 md:gap-6">
           {home4BannerGridData.map((banner) => (
             <div
               key={banner._id}
@@ -20,18 +20,18 @@ const Home4BannerGrid = () => {
                 alt={banner.title}
                 width={1000}
                 height={1000}
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
               {/* Banner Content */}
-              <div className="absolute bottom-8 sm:bottom-12 left-8 sm:left-12 z-10">
-                <h5 className="text-white mb-2 md:mb-3">{banner.title}</h5>
+              <div className="absolute bottom-8 left-8 z-10 sm:bottom-12 sm:left-12">
+                <h5 className="mb-2 text-white md:mb-3">{banner.title}</h5>
                 <Link
                   href={banner.linkUrl}
-                  className="text-sm sm:text-base text-white inline-flex items-center gap-1 border-b border-white group"
+                  className="group inline-flex items-center gap-1 border-b border-white text-sm text-white sm:text-base"
                 >
                   Collection{" "}
                   <span>
-                    <ArrowRightIcon className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-150" />
+                    <ArrowRightIcon className="h-4 w-4 transition-transform duration-150 group-hover:translate-x-1 sm:h-5 sm:w-5" />
                   </span>
                 </Link>
               </div>

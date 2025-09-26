@@ -10,8 +10,7 @@ export const home3FeaturedData = [
   {
     _id: "1",
     name: "Shark - Men's cabretta white golf glove ",
-    description:
-      "A stylish and comfortable loveseat sofa, perfect for modern living rooms.",
+    description: "A stylish and comfortable loveseat sofa, perfect for modern living rooms.",
     price: 19.99,
     imageUrl: home3FeaturedImg1.src,
     rating: 5,
@@ -32,8 +31,7 @@ export const home3FeaturedData = [
   {
     _id: "3",
     name: "G/FORE - Mens Left Glove Snow 2023",
-    description:
-      "A minimalist beige table lamp, ideal for bedside or desk lighting.",
+    description: "A minimalist beige table lamp, ideal for bedside or desk lighting.",
     price: 30.0,
     imageUrl: home3FeaturedImg3.src,
     rating: 4,
@@ -43,8 +41,7 @@ export const home3FeaturedData = [
   {
     _id: "4",
     name: "Utility Rover-R Double Strap Bag All Black - 2023",
-    description:
-      "A natural bamboo basket, great for stylish and eco-friendly storage.",
+    description: "A natural bamboo basket, great for stylish and eco-friendly storage.",
     price: 209.99,
     imageUrl: home3FeaturedImg4.src,
     rating: 1,
@@ -55,8 +52,7 @@ export const home3FeaturedData = [
   {
     _id: "5",
     name: "Air Jordan 1 Low G Black/Black/Iron Grey - SS23",
-    description:
-      "A modern toaster with a premium finish, perfect for quick breakfasts.",
+    description: "A modern toaster with a premium finish, perfect for quick breakfasts.",
     price: 111.99,
     originalPrice: 200.0,
     imageUrl: home3FeaturedImg5.src,
@@ -68,8 +64,7 @@ export const home3FeaturedData = [
   {
     _id: "6",
     name: "Shark - Men's cabretta white golf glove ",
-    description:
-      "A stylish and comfortable loveseat sofa, perfect for modern living rooms.",
+    description: "A stylish and comfortable loveseat sofa, perfect for modern living rooms.",
     price: 19.99,
     imageUrl: home3FeaturedImg1.src,
     rating: 5,
@@ -90,8 +85,7 @@ export const home3FeaturedData = [
   {
     _id: "8",
     name: "G/FORE - Mens Left Glove Snow 2023",
-    description:
-      "A minimalist beige table lamp, ideal for bedside or desk lighting.",
+    description: "A minimalist beige table lamp, ideal for bedside or desk lighting.",
     price: 30.0,
     imageUrl: home3FeaturedImg3.src,
     rating: 4,
@@ -101,8 +95,7 @@ export const home3FeaturedData = [
   {
     _id: "9",
     name: "Utility Rover-R Double Strap Bag All Black - 2023",
-    description:
-      "A natural bamboo basket, great for stylish and eco-friendly storage.",
+    description: "A natural bamboo basket, great for stylish and eco-friendly storage.",
     price: 209.99,
     imageUrl: home3FeaturedImg4.src,
     rating: 1,
@@ -113,8 +106,7 @@ export const home3FeaturedData = [
   {
     _id: "10",
     name: "Air Jordan 1 Low G Black/Black/Iron Grey - SS23",
-    description:
-      "A modern toaster with a premium finish, perfect for quick breakfasts.",
+    description: "A modern toaster with a premium finish, perfect for quick breakfasts.",
     price: 111.99,
     originalPrice: 200.0,
     imageUrl: home3FeaturedImg5.src,

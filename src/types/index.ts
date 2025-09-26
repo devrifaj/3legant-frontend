@@ -5,3 +5,5 @@ export * from "./blog";
 export * from "./brandLogoSlider";
 export * from "./instagramNewsFeed";
 export * from "./banner";
+export * from "./user";
+export * from "./queryMutationErrorResponse";

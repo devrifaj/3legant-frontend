@@ -11,7 +11,7 @@ export type BannerProps = {
     };
     bannerStyles: {
       bgColor: string;
-      title:string;
+      title: string;
       subtitle: string;
       description: string;
       button: string;

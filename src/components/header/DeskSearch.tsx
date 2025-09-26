@@ -8,13 +8,9 @@ type DeskSearchProps = {
 
 const DeskSearch = ({ isSearchOpen, setSearchOpen }: DeskSearchProps) => {
   return (
-    <Modal
-      isOpen={isSearchOpen}
-      onClose={() => setSearchOpen(false)}
-      position="top"
-    >
+    <Modal isOpen={isSearchOpen} onClose={() => setSearchOpen(false)} position="top">
       <div className="wrapper">
-        <div className="3xl:max-w-[680px] xl:max-w-[540px] md:max-w-[400px] sm:max-w-[350px] max-w-[300px] mx-auto">
+        <div className="mx-auto max-w-[300px] 3xl:max-w-[680px] sm:max-w-[350px] md:max-w-[400px] xl:max-w-[540px]">
           <Search />
         </div>
       </div>

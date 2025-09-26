@@ -8,5 +8,5 @@ export interface BannerItem {
 
 export interface BannerGridProps {
   data: BannerItem[];
-  variant?: "home1" | "home2" | "home3"
+  variant?: "home1" | "home2" | "home3";
 }

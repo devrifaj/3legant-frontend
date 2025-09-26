@@ -4,7 +4,7 @@ import React from "react";
 const Search = () => {
   return (
     <div>
-      <label className="input border-black w-full">
+      <label className="input w-full border-black">
         <SearchIcon />
         <input className="" type="search" required placeholder="Search" />
       </label>

@@ -20,17 +20,17 @@ const NotificationOffer = () => {
             (home3 && "bg-secondary-green") ||
             (home4 && "bg-secondary-blue") ||
             "bg-neutral-2"
-          }  py-2`}
+          } py-2`}
         >
           <div className="wrapper">
-            <div className="xs:gap-3 gap-x-2 flex-center flex-wrap relative">
+            <div className="flex-center relative flex-wrap gap-x-2 xs:gap-3">
               <TicketIcon
                 className={`${
                   (home2 && "text-neutral-1") ||
                   (home3 && "text-black") ||
                   (home4 && "text-neutral-1") ||
                   "text-neutral-7"
-                } w-4 h-4 sm:w-6 sm:h-6`}
+                } h-4 w-4 sm:h-6 sm:w-6`}
               />
               <p
                 className={`${
@@ -38,12 +38,12 @@ const NotificationOffer = () => {
                   (home3 && "text-black") ||
                   (home4 && "text-neutral-1") ||
                   "text-neutral-5"
-                } sm:text-sm text-xs font-semibold `}
+                } text-xs font-semibold sm:text-sm`}
               >
                 30% off storewide — Limited time!{" "}
               </p>
               <Link
-                className={`flex gap-1 items-center sm:text-sm text-xs font-medium underline ${
+                className={`flex items-center gap-1 text-xs font-medium underline sm:text-sm ${
                   (home2 && "text-secondary-orange") ||
                   (home3 && "text-black") ||
                   (home4 && "text-neutral-1") ||
@@ -51,11 +51,11 @@ const NotificationOffer = () => {
                 }`}
                 href="/collections"
               >
-                Shop Now <ArrowRightIcon className="w-5 h-5" />
+                Shop Now <ArrowRightIcon className="h-5 w-5" />
               </Link>
 
               <button
-                className="absolute sm:right-4 -right-4 top-0 bottom-0"
+                className="absolute top-0 -right-4 bottom-0 sm:right-4"
                 onClick={() => setNotificationOpen(false)}
               >
                 <CancelIcon

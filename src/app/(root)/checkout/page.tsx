@@ -1,11 +1,11 @@
-import { CheckoutSteps } from '@/components'
+import { CheckoutSteps } from "@/components";
 
 const CheckoutPage = () => {
   return (
     <div>
-        <CheckoutSteps />
+      <CheckoutSteps />
     </div>
-  )
-}
+  );
+};
 
-export default CheckoutPage
+export default CheckoutPage;

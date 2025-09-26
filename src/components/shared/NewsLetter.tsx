@@ -53,8 +53,7 @@ const variantConfig: Record<
       "lg:w-[400px] xl:w-[500px] lg:h-[400px] xl:h-[500px] -rotate-[15deg] mix-blend-multiply scale-70 z-10 relative",
     rightImagePosition:
       "3xl:!left-[39%] 2xl:!left-[30%] xl:left-[25%] lg:left-[25%] lg:-top-4 xl:-top-18 mx-auto",
-    rightImageClasses:
-      "w-[800px] xl:w-[950px] h-[500px] xl:h-[600px] object-cover",
+    rightImageClasses: "w-[800px] xl:w-[950px] h-[500px] xl:h-[600px] object-cover",
   },
   home3: {
     bg: "bg-black",
@@ -63,12 +62,9 @@ const variantConfig: Record<
     leftImage: home3LeftNewsLetter,
     rightImage: home3RightNewsLetter,
     leftImagePosition: "lg:left-0 xl:left-10 lg:-top-10 xl:-top-20",
-    leftImageClasses:
-      "lg:w-[700px] xl:w-[800px] lg:h-[500px] xl:h-[600px] object-cover",
-    rightImagePosition:
-      "lg:-right-26 xl:-right-20 3xl:!-right-10 lg:-top-16 xl:-top-40",
-    rightImageClasses:
-      "lg:w-[500px] xl:w-[600px] lg:h-[600px] xl:h-[850px] object-cover",
+    leftImageClasses: "lg:w-[700px] xl:w-[800px] lg:h-[500px] xl:h-[600px] object-cover",
+    rightImagePosition: "lg:-right-26 xl:-right-20 3xl:!-right-10 lg:-top-16 xl:-top-40",
+    rightImageClasses: "lg:w-[500px] xl:w-[600px] lg:h-[600px] xl:h-[850px] object-cover",
   },
 };
 
@@ -77,23 +73,19 @@ const NewsLetter = ({ variant }: NewsLetterProps) => {
   const home3 = variant === "home3";
 
   return (
-    <section
-      className={`${config.bg} pb-[90px] pt-[100px] relative overflow-hidden`}
-    >
+    <section className={`${config.bg} relative overflow-hidden pt-[100px] pb-[90px]`}>
       <div className="wrapper">
-        <div className="flex flex-col items-center z-20 relative">
+        <div className="relative z-20 flex flex-col items-center">
           {/* Newsletter description */}
           <div className="mb-8">
             {/* title */}
             <h4
-              className={`mb-2 lg:text-[40px] md:text-[34px] text-[28px] text-center ${config.textColor}`}
+              className={`mb-2 text-center text-[28px] md:text-[34px] lg:text-[40px] ${config.textColor}`}
             >
               Join Our Newsletter
             </h4>
             {/* sub text */}
-            <p
-              className={`lg:text-lg md:text-base text-sm text-center ${config.subTextColor}`}
-            >
+            <p className={`text-center text-sm md:text-base lg:text-lg ${config.subTextColor}`}>
               Sign up for deals, new products and promotions
             </p>
           </div>
@@ -102,7 +94,7 @@ const NewsLetter = ({ variant }: NewsLetterProps) => {
           <form className="relative flex w-full sm:w-[490px]">
             {/* email icon */}
             <span
-              className={`absolute flex items-center h-full ${
+              className={`absolute flex h-full items-center ${
                 home3 ? "text-neutral-1" : "text-primary-black"
               }`}
             >
@@ -112,15 +104,15 @@ const NewsLetter = ({ variant }: NewsLetterProps) => {
             <input
               type="email"
               placeholder="Email address"
-              className={`border-b w-full pl-8 pr-16 py-3 outline-0 placeholder:text-base placeholder:font-medium ${
+              className={`w-full border-b py-3 pr-16 pl-8 outline-0 placeholder:text-base placeholder:font-medium ${
                 home3
-                  ? "placeholder:text-neutral-1 text-neutral-1 border-neutral-1"
-                  : "placeholder:text-neutral-4 text-neutral-4 border-neutral-4/50"
+                  ? "border-neutral-1 text-neutral-1 placeholder:text-neutral-1"
+                  : "border-neutral-4/50 text-neutral-4 placeholder:text-neutral-4"
               }`}
             />
             {/* submit button */}
             <button
-              className={`absolute right-0 flex items-center h-full text-base font-medium ${
+              className={`absolute right-0 flex h-full items-center text-base font-medium ${
                 home3 ? "text-neutral-1" : "text-neutral-4"
               }`}
               type="submit"
@@ -132,9 +124,7 @@ const NewsLetter = ({ variant }: NewsLetterProps) => {
       </div>
 
       {/* Left bg Image */}
-      <div
-        className={`absolute ${config.leftImagePosition} lg:block hidden bottom-0`}
-      >
+      <div className={`absolute ${config.leftImagePosition} bottom-0 hidden lg:block`}>
         <Image
           src={config.leftImage}
           alt="newsletter-left-bg"
@@ -144,9 +134,7 @@ const NewsLetter = ({ variant }: NewsLetterProps) => {
       </div>
 
       {/* Right bg Image */}
-      <div
-        className={`absolute ${config.rightImagePosition} bottom-0 lg:block hidden`}
-      >
+      <div className={`absolute ${config.rightImagePosition} bottom-0 hidden lg:block`}>
         <Image
           src={config.rightImage}
           alt="newsletter-right-bg"

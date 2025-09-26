@@ -1,8 +1,7 @@
 export const slides = [
   {
     id: 1,
-    image:
-      "https://de5pvxllgo.ufs.sh/f/Rw5GiB9n953UaukQ5L7otTOmH4EJRqF3scfCa7vIQAhlywLG",
+    image: "https://de5pvxllgo.ufs.sh/f/Rw5GiB9n953UaukQ5L7otTOmH4EJRqF3scfCa7vIQAhlywLG",
   },
   {
     id: 2,

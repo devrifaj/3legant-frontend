@@ -1,4 +1,4 @@
-const CancelIcon = ({className = ""}) => {
+const CancelIcon = ({ className = "" }) => {
   return (
     <svg
       width="24"

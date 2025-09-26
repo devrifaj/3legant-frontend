@@ -8,10 +8,7 @@ import { ProductCard } from "@/components";
 // swiper styles
 import "swiper/css";
 
-const NewArrivalCarousel = ({
-  products,
-  progressRef,
-}: Home1NewArrivalCarouselProps) => {
+const NewArrivalCarousel = ({ products, progressRef }: Home1NewArrivalCarouselProps) => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   useEffect(() => {
@@ -19,9 +16,8 @@ const NewArrivalCarousel = ({
       if (!progressRef.current || !swiperRef.current) return;
 
       const progress = swiperRef.current.progress;
-      (progressRef.current.querySelector(
-        ".progress"
-      ) as HTMLElement)!.style.width = `${progress * 100}%`;
+      (progressRef.current.querySelector(".progress") as HTMLElement)!.style.width =
+        `${progress * 100}%`;
     };
 
     if (swiperRef.current) {

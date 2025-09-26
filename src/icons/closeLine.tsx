@@ -1,4 +1,4 @@
-const CloseLineIcon = ({className = ""}) => {
+const CloseLineIcon = ({ className = "" }) => {
   return (
     <svg
       width="24"

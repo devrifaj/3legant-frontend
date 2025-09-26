@@ -5,9 +5,9 @@ import { ArrowRightIcon } from "@/icons";
 
 const Home1Banner = () => {
   return (
-    <section className="flex flex-col lg:flex-row ">
+    <section className="flex flex-col lg:flex-row">
       {/* Banner Image */}
-      <div className="lg:w-1/2 w-full relative h-[365px] lg:h-[530px]">
+      <div className="relative h-[365px] w-full lg:h-[530px] lg:w-1/2">
         <Image
           src={home1BannerImg}
           alt="banner"
@@ -18,9 +18,9 @@ const Home1Banner = () => {
       </div>
 
       {/* Banner Content */}
-      <div className="lg:w-1/2 w-full bg-neutral-2 pl-8 sm:pl-[72px] py-14 lg:py-0 flex flex-col justify-center">
+      <div className="flex w-full flex-col justify-center bg-neutral-2 py-14 pl-8 sm:pl-[72px] lg:w-1/2 lg:py-0">
         <div>
-          <span className="inline-block mb-4 text-base font-bold text-secondary-blue">
+          <span className="mb-4 inline-block text-base font-bold text-secondary-blue">
             SALE UP TO 35% OFF
           </span>
 
@@ -29,18 +29,17 @@ const Home1Banner = () => {
             New lower prices!
           </h4>
 
-          <p className="text-base md:text-xl text-neutral-7 mb-6 xs:max-w-[450px] xs:mr-0 mr-4">
-            It’s more affordable than ever to give every room in your home a
-            stylish makeover
+          <p className="mr-4 mb-6 text-base text-neutral-7 xs:mr-0 xs:max-w-[450px] md:text-xl">
+            It’s more affordable than ever to give every room in your home a stylish makeover
           </p>
 
           <Link
-            className="inline-flex items-center gap-1 text-sm font-medium border-b text-neutral-7 md:text-base border-neutral-7 group"
+            className="group inline-flex items-center gap-1 border-b border-neutral-7 text-sm font-medium text-neutral-7 md:text-base"
             href="/collections"
           >
             Shop Now
             <span className="transition-transform group-hover:translate-x-1">
-              <ArrowRightIcon className="w-4 h-4 md:w-5 md:h-5" />
+              <ArrowRightIcon className="h-4 w-4 md:h-5 md:w-5" />
             </span>
           </Link>
         </div>

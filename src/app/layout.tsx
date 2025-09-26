@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import ReduxProvider from "@/store/ReduxProvider";
+import ClientProviders from "@/provider/ClientProviders";
 
 /* fonts */
 const poppins = Poppins({
@@ -37,9 +37,9 @@ const RootLayout = ({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${inter.variable} ${spaceGrotesk.variable} antialiased flex flex-col h-screen`}
+        className={`${poppins.variable} ${inter.variable} ${spaceGrotesk.variable} flex h-screen flex-col antialiased`}
       >
-        <ReduxProvider>{children}</ReduxProvider>
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );

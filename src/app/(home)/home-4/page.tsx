@@ -27,15 +27,11 @@ const HomePage4 = () => {
       <main className="flex-1">
         <Home4Hero />
         <BrandLogoSlider variant="home4" data={home4BrandLogoSliderData} />
-        <ProductCarousel
-          title="Just In"
-          products={home4JustInData}
-          variant="home4"
-        />
+        <ProductCarousel title="Just In" products={home4JustInData} variant="home4" />
         <Home4ShopByCategories />
         <Home4BannerGrid />
         <BestSeller variant="home4" products={home4BestSellerData} />
-        <Banner bannerData={{...home4BannerData, variant: "home4"}} />
+        <Banner bannerData={{ ...home4BannerData, variant: "home4" }} />
         <Home4Video />
         <Blog blogs={home4BlogData} />
         <InstagramNewsFeed images={home4InstagramNewsFeedData} />
